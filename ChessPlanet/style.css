@@ -315,7 +315,7 @@ iframe {
   padding: 1px 3px;
   position: relative;
   display: inline-block;
-  cursor: help;
+  cursor: default;
 }
 
 .titles:hover {
