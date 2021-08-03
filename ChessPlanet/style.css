@@ -181,6 +181,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 3s ease 0s;
 }
 
 .home .textbox {
@@ -203,7 +204,6 @@ main {
 
 .home .textbox p {
   max-width: 150%;
-  transition: 3s ease 0s;
 }
 
 .home .imgBox {
