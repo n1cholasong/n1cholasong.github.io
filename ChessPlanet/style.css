@@ -11,6 +11,13 @@ html, body {
   width: 100%;
 }
 
+hr {
+  border: none;
+  height: 0.3px;
+  background-color: #ECF0F1;
+}
+
+/*========== Navigation Bar ==========*/
 header {
   min-width: 100%;
   display: flex;
@@ -75,12 +82,6 @@ button:hover, .button:hover {
   background-color: rgba(238, 108, 77, 0.5);
   color: #fec89a;
   transition: 0.3s ease 0s;
-}
-
-hr {
-  border: none;
-  height: 0.3px;
-  background-color: #ECF0F1;
 }
 
 /*========== Login-SignUp page ==========*/
@@ -296,6 +297,7 @@ iframe {
 
 .hyperlinks:hover {
   color: #457b9d;
+  transition: 0.3s ease 0s;
 }
 
 .tooltip:hover .tooltiptext {
@@ -337,6 +339,7 @@ iframe {
   bottom: 100%;
   left: 100%;
   margin-left: -60px;
+  transition: 0.3s ease 0s;
 }
 
 .hyperlinks {
