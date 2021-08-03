@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="../css/flag.min.css">
+  <script defer type="text/javascript" src="../login.js"></script>
+  <link rel="shortcut icon" type="image/png" href="../images/chessSet/Knight.png">
+  <title>Chess Planet - Top Players</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="../images/logo1.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../chessPlanet_Basics.html">Basics</a></li>
+        <li><a href="../chessPlanet_Openings.html">Openings</a></li>
+        <li><a href="../chessPlanet_Play.html">Play</a></li>
+        <li><a class="active" href="#">GMs</a></li>
+      </ul>
+    </nav>
+    <a class="head" onclick="openLogin()"><button>Login</button></a>
+    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+  </header>
+  <div class="account">
+    <div class="login-popup">
+      <div class="login-page">
+        <a class="close" onclick="closeLogin()">+</a>
+        <img src="../images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <form id="login" method="POST">
+          <input type="text" id="username" name="username" placeholder="Username">
+          <input type="password" id="password" name="password" placeholder="Password">
+          <input type="submit" class="button" value="Login">
+        </form>
+      </div>
+    </div>
+    <div class="signup-popup">
+      <div class="signup-page">
+        <a class="close" onclick="closeSignUp()">+</a>
+        <img src="../images/user.png" alt="profile"><br>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label>New account</label>
+        <form id="signup" method="POST">
+          <input type="text" id="username" name="username" placeholder="Enter a username">
+          <input type="password" id="password" name="password" placeholder="Enter a password">
+          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <input type="submit" class="button" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="headings">
+      <h1>Grandmasters</h1><br>
+      <hr><br>
+      <p>Top 5 GMs in Classical Chess</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>
+            <div class="tooltip">
+              <a class="active hyperlinks head" href="#">Classical</a>
+              <span class="tooltiptext">Classical Chess is a mode where each player can play the game slow and think through each move before they move their pieces.</span>
+            </div>
+          </th>
+          <th>
+            <div class="tooltip">
+              <a class="hyperlinks head" href="rapid.html">Rapid</a>
+              <span class="tooltiptext">Rapid Chess is a mode where each player can play the game slow and think through each move before they move their pieces.</span>
+            </div>
+          </th>
+          <th>
+            <div class="tooltip">
+              <a class="hyperlinks head" href="blitz.html">Blitz</a>
+              <span class="tooltiptext">Blitz Chess is a mode where each player can play the game slow and think through each move before they move their pieces.</span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <div class="titles">GM<span class="tooltiptext">Grandmaster</span></div>
+            <a class="hyperlinks" href="https://ratings.fide.com/profile/1503014">Magnus Carlsen</a>
+          </td>
+          <td>Norway <i class="norway flag"></i></td>
+          <td>2874</td>
+          <td>2881</td>
+          <td>2886</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            <div class="titles">GM<span class="tooltiptext">Grandmaster</span></div>
+            <a class="hyperlinks" href="https://ratings.fide.com/profile/2020009">Fabiano Caruana</a>
+          </td>
+          <td>United States <i class="united states flag"></i></td>
+          <td>2806</td>
+          <td>2773</td>
+          <td>2711</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            <div class="titles">GM<span class="tooltiptext">Grandmaster</span></div>
+            <a class="hyperlinks" href="https://ratings.fide.com/profile/8603677">Ding Liren</a>
+          </td>
+          <td>China <i class="china flag"></i></td>
+          <td>2799</td>
+          <td>2836</td>
+          <td>2788</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            <div class="titles">GM<span class="tooltiptext">Grandmaster</span></div>
+            <a class="hyperlinks" href="https://ratings.fide.com/profile/4168119">Ian Nepomniachtchi</a>
+          </td>
+          <td>Russia <i class="russia flag"></i></td>
+          <td>2792</td>
+          <td>2791</td>
+          <td>2807</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            <div class="titles">GM<span class="tooltiptext">Grandmaster</span></div>
+            <a class="hyperlinks" href="https://ratings.fide.com/profile/13401319">Shakhriyar Mamedyarov</a>
+          </td>
+          <td>Azerbaijan <i class="azerbaijan flag"></i></td>
+          <td>2782</td>
+          <td>2761</td>
+          <td>2716</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6">Chess ratings are updated as of August 2, 2021</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+
+  <footer>
+    <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
+  </footer>
+</body>
+
+</html>

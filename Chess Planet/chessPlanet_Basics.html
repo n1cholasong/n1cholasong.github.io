@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <script defer type="text/javascript" src="login.js"></script>
+  <link rel="shortcut icon" type="image/png" href="images/chessSet/Knight.png">
+  <title>Chess Planet - Basics</title>
+</head>
+
+<body>
+  <header>
+    <img id="top" class="logo" src="images/logo1.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="#">Basics</a></li>
+        <li><a href="chessPlanet_Openings.html">Openings</a></li>
+        <li><a href="chessPlanet_Play.html">Play</a></li>
+        <li><a href="chessPlanet_GMs/classical.html">GMs</a></li>
+      </ul>
+    </nav>
+    <a class="head" onclick="openLogin()"><button>Login</button></a>
+    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+  </header>
+  <div class="account">
+    <div class="login-popup">
+      <div class="login-page">
+        <a class="close" onclick="closeLogin()">+</a>
+        <img src="images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <form id="login" method="POST">
+          <input type="text" id="username" name="username" placeholder="Username">
+          <input type="password" id="password" name="password" placeholder="Password">
+          <input type="submit" class="button" value="Login">
+        </form>
+      </div>
+    </div>
+    <div class="signup-popup">
+      <div class="signup-page">
+        <a class="close" onclick="closeSignUp()">+</a>
+        <img src="images/user.png" alt="profile"><br>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label>New account</label>
+        <form id="signup" method="POST">
+          <input type="text" id="username" name="username" placeholder="Enter a username">
+          <input type="password" id="password" name="password" placeholder="Enter a password">
+          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <input type="submit" class="button" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="headings">
+      <h1>Basics</h1><br>
+      <hr><br>
+      <p>Let us start of by learning the rules of the game.</p><br><br>
+    </div>
+    <div class="basic containers">
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="king piece" src="images/chessSet/King.png" alt="king">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The King Moves</h2>
+          <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/ZWjDKiHBvZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="queen piece" src="images/chessSet/Queen.png" alt="queen">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The Queen Moves</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vwgwI0wnULU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="rook piece" src="images/chessSet/Rook.png" alt="rook">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The Rook Moves</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PlgnoYqsK-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="bishop piece" src="images/chessSet/Bishop.png" alt="bishop">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The Bishop Moves</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_y3eA21rD1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="knight piece" src="images/chessSet/Knight.png" alt="knight">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The Knight Moves</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VGoT8FR0O_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <img class="pawn piece" src="images/chessSet/Pawn.png" alt="pawn">
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <h2>How The Pawn Moves</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/00uUlbcPz5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <h2 class="title">Special Case</h2>
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <div class="row">
+            <div class="col-md-6 themed-grid-col">
+              <h2>Pawn Promotion</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Tt8VTZFPFa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <h2>En Passant</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/c_KRIH0wnhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <h2 class="title">Castling</h2>
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FcLYgXCkucc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <h2 class="title">Checks</h2>
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <div class="row">
+            <div class="col-md-6 themed-grid-col">
+              <h2>Giving Checks</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/lBsWZqv5acI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <h2>Getting out of Checks</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/vjJkdBXVgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">
+          <h2 class="title">Checkmate</h2>
+        </div>
+        <div class="col-md-8 themed-grid-col">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uu7ISsU-Ufw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
+  </footer>
+</body>
+
+</html>

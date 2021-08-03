@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script defer type="text/javascript" src="login.js"></script>
+  <link rel="shortcut icon" type="image/png" href="images/chessSet/Knight.png">
+  <title>Chess Planet - Home</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo1.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="chessPlanet_Basics.html">Basics</a></li>
+        <li><a href="chessPlanet_Openings.html">Openings</a></li>
+        <li><a href="chessPlanet_Play.html">Play</a></li>
+        <li><a href="chessPlanet_GMs/classical.html">GMs</a></li>
+      </ul>
+    </nav>
+    <a class="head" onclick="openLogin()"><button>Login</button></a>
+    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+  </header>
+  <div class="account">
+    <div class="login-popup">
+      <div class="login-page">
+        <a class="close" onclick="closeLogin()">+</a>
+        <img src="images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <form id="login" method="POST">
+          <input type="text" id="username" name="username" placeholder="Username">
+          <input type="password" id="password" name="password" placeholder="Password">
+          <input type="submit" class="button" value="Login">
+        </form>
+      </div>
+    </div>
+    <div class="signup-popup">
+      <div class="signup-page">
+        <a class="close" onclick="closeSignUp()">+</a>
+        <img src="images/user.png" alt="profile"><br>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label>New account</label>
+        <form id="signup" method="POST">
+          <input type="text" id="username" name="username" placeholder="Enter a username">
+          <input type="password" id="password" name="password" placeholder="Enter a password">
+          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <input type="submit" class="button" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+  <main class="home">
+    <div class="textbox">
+      <h1>Welcome to <br><span>Chess Planet</span></h1>
+      <p>Chess is a game between 2 players on opposite ends of the board.
+        To win the game, you have to checkmate your opponent's king.
+        However, it is not as easy as it seems. Chess is all about your
+        game plan and strategy. One wrong move and you may get your king checkmated.
+      </p>
+      <br>
+      <a href="chessPlanet_Basics.html"><button>Learn More</button></a>
+    </div>
+    <div class="imgBox">
+      <img src="images/welcome.png" alt="chess piece">
+    </div>
+    <img class="background" src="https://media.sketchfab.com/models/9363665ee7b94a16b6aba18a89d70be9/thumbnails/b5c7bc7d6dfe496fac3463b45e535ef8/b4b17aa65e68425ab4aea8db1f136202.jpeg" alt="city">
+  </main>
+  <footer>
+    <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
+  </footer>
+</body>
+
+</html>

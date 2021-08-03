@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <script defer type="text/javascript" src="login.js"></script>
+  <link rel="shortcut icon" type="image/png" href="images/chessSet/Knight.png">
+  <title>Chess Planet - Openings</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo1.png" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chessPlanet_Basics.html">Basics</a></li>
+        <li><a class="active" href="#">Openings</a></li>
+        <li><a href="chessPlanet_Play.html">Play</a></li>
+        <li><a href="chessPlanet_GMs/classical.html">GMs</a></li>
+      </ul>
+    </nav>
+    <a class="head" onclick="openLogin()"><button>Login</button></a>
+    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+  </header>
+  <div class="account">
+    <div class="login-popup">
+      <div class="login-page">
+        <a class="close" onclick="closeLogin()">+</a>
+        <img src="images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <form id="login" method="POST">
+          <input type="text" id="username" name="username" placeholder="Username">
+          <input type="password" id="password" name="password" placeholder="Password">
+          <input type="submit" class="button" value="Login">
+        </form>
+      </div>
+    </div>
+    <div class="signup-popup">
+      <div class="signup-page">
+        <a class="close" onclick="closeSignUp()">+</a>
+        <img src="images/user.png" alt="profile"><br>
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label>New account</label>
+        <form id="signup" method="POST">
+          <input type="text" id="username" name="username" placeholder="Enter a username">
+          <input type="password" id="password" name="password" placeholder="Enter a password">
+          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <input type="submit" class="button" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="headings">
+      <h1>Openings</h1><br>
+      <hr><br>
+      <p>Now that you understand the fundamentals of chess, in this section we
+        will learn more about chess strategies and tactics we can apply to our gameplay.
+        A well played chess opening can help us gain a slight advantage from our
+        opponent or even winning the game!</p><br><br>
+    </div>
+    <div class="open containers">
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Basics</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8IlJ3v8I4Z8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The London System</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/49H728S_VjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Caro-Kann</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rmbU97iftC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Stonewall Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4_brAnORWGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Slav Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cs54KXnGc-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Dutch Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ogmGNIk6W7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The French Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5pec-u6PSvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The King's Indian Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kK0cq6UBt1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br>
+      <div class="row mb-3">
+        <div class="col-md-12 themed-grid-col">
+          <h2>The Sicilian Defense</h2><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qM4e7g2RukI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
+  </footer>
+</body>
+
+</html>
