@@ -184,7 +184,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 3.5s ease 0s;
+  transition: 3.2s ease 0s;
 }
 
 .home .textbox {
@@ -313,7 +313,7 @@ iframe {
   padding: 1px 3px;
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  cursor: help;
 }
 
 .titles:hover {
