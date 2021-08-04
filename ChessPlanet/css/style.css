@@ -184,7 +184,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 3.2s ease 0s;
+  transition: 3.2s ease 0s !important;
 }
 
 .home .textbox {
