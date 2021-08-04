@@ -311,7 +311,7 @@ iframe {
 }
 
 /*Tool Tip for GM tag*/
-.titles {
+.titles span {
   background-color: #b33430;
   border-radius: 6px;
   font-size: 12px;
