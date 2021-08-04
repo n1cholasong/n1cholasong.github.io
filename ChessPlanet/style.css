@@ -277,15 +277,15 @@ iframe {
 
 /*========== Grandmasters Page ==========*/
 /*Tool Tip for chess modes*/
-.tooltip a {
-  font-weight: bold;
-}
-
 .tooltip {
   font-size: 12px;
   position: relative;
   display: inline-block;
   cursor: pointer;
+}
+
+.tooltip a {
+  font-weight: bold;
 }
 
 .tooltip .tooltiptext {
