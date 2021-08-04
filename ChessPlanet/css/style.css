@@ -311,7 +311,7 @@ iframe {
 }
 
 /*Tool Tip for GM tag*/
-.titles span {
+.titles {
   background-color: #b33430;
   border-radius: 6px;
   font-size: 12px;
@@ -343,7 +343,6 @@ iframe {
   bottom: 100%;
   left: 100%;
   margin-left: -60px;
-  transition: 0.3s ease 0s;
 }
 
 .hyperlinks {
