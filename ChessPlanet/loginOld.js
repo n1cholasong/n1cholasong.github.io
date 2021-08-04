@@ -34,31 +34,11 @@ loginForm.addEventListener('submit', function(e) {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-  var data = localStorage.getItem("accounts");
-
-  if(!data) {
-    data = "[]"
-    localStorage.setItem("accounts", JSON.stringify(data))
-  }
-
-  data = JSON.parse(data);
-
-
-
-  function accountExists(accounts, username, password) {
-    for(var i in accounts) {
-      if(accounts[i]["username"] == username && accounts[i]["password"] == password) {
-        return true;
-      }
-    }
-    return false;
-  }
-
   if (username == "" || password == "") {
     alert("Please enter your username and password.");
   }
 
-  if (accountExists(data, username, password)) {
+  if (username == "nicholas" && password== "123") {
     alert(`Welcome to Chess Planet, ${username}!`);
     closeLogin();
 
@@ -73,30 +53,17 @@ var signUpForm = document.getElementById('signup')
 signUpForm.addEventListener('submit', function(e) {
   e.preventDefault();
 
-    var username = document.getElementById('username2').value;
-    var password = document.getElementById('password2').value;
-    var password2 = document.getElementById('password22').value;
-    console.log(username, password);
-    if (!username == "" && !password == "") {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var password2 = document.getElementById('password2').value;
+
+  if (username == "" || password == "") {
+    alert("Please enter your username and password.");
+  } else {
       if (password !== password2) {
         alert("Password do not match!");
       } else {
-        var data = localStorage.getItem("accounts");
-
-        if(!data) {
-          data = "[]"
-          localStorage.setItem("accounts", JSON.stringify(data))
-        }
-
-        data = JSON.parse(data);
-
-        data.push({"username": username, "password": password});
-
-        localStorage.setItem("accounts", JSON.stringify(data));
         alert(`Welcome to Chess Planet, ${username}!`);
       }
-
-    } else {
-      alert("Please enter your username and password.");
     }
   })
