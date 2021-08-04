@@ -11,6 +11,13 @@ html, body {
   width: 100%;
 }
 
+hr {
+  border: none;
+  height: 0.3px;
+  background-color: #ECF0F1;
+}
+
+/*========== Navigation Bar ==========*/
 header {
   min-width: 100%;
   display: flex;
@@ -77,7 +84,7 @@ button:hover, .button:hover {
   transition: 0.3s ease 0s;
 }
 
-/*Login page*/
+/*========== Login-SignUp page ==========*/
 .login-popup {
   width: 100%;
   height: 100%;
@@ -102,7 +109,7 @@ button:hover, .button:hover {
   z-index: 20;
 }
 
-.login-page {
+.login-page, .signup-page {
   width: 300px;
   height: 400px;
   background-color: #e9ecef;
@@ -112,22 +119,7 @@ button:hover, .button:hover {
   position: relative;
 }
 
-.login-page img {
-  padding-top: 20%;
-  width: 100px;
-}
-
-.signup-page {
-  width: 300px;
-  height: 400px;
-  background-color: #e9ecef;
-  border-radius: 15px;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-}
-
-.signup-page img {
+.login-page img, .signup-page img {
   padding-top: 20%;
   width: 100px;
 }
@@ -168,6 +160,18 @@ main {
   display: grid;
 }
 
+footer {
+  background-color: #293241;
+  position: relative;
+  height: 35px;
+  margin-top: -35px;
+  clear: both;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/*========== Home Page ==========*/
 .background {
   position: absolute;
   right: 0;
@@ -181,6 +185,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 3.2s ease 0s;
 }
 
 .home .textbox {
@@ -203,7 +208,6 @@ main {
 
 .home .textbox p {
   max-width: 150%;
-  transition: 3s ease 0s;
 }
 
 .home .imgBox {
@@ -217,28 +221,12 @@ main {
   max-width: 100%;
 }
 
-footer {
-  background-color: #293241;
-  position: relative;
-  height: 35px;
-  margin-top: -35px;
-  clear: both;
-  padding: 10px;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
 .headings {
   font-size: 100%;
   text-align: center;
 }
 
-.chessboard {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
+/*========== Basic & Opening Page ==========*/
 .col-md-4, .col-md-6, .col-md-8, .col-md-12 {
   display: grid;
 }
@@ -265,6 +253,12 @@ footer {
   transition: 0.5s ease 0s;
 }
 
+h2 {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
 iframe {
   margin: auto;
   border-radius: 30px;
@@ -274,17 +268,24 @@ iframe {
   max-height: 100%
 }
 
-h2 {
-  font-size: 25px;
-  text-align: center;
-  padding: 10px;
+/*========== Play Page ==========*/
+.chessboard {
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
+/*========== Grandmasters Page ==========*/
+/*Tool Tip for chess modes*/
 .tooltip {
   font-size: 12px;
   position: relative;
   display: inline-block;
   cursor: pointer;
+}
+
+.tooltip a {
+  font-weight: bold;
 }
 
 .tooltip .tooltiptext {
@@ -300,6 +301,7 @@ h2 {
 
 .hyperlinks:hover {
   color: #457b9d;
+  transition: 0.3s ease 0s;
 }
 
 .tooltip:hover .tooltiptext {
@@ -309,7 +311,7 @@ h2 {
 }
 
 /*Tool Tip for GM tag*/
-.titles {
+.titles span {
   background-color: #b33430;
   border-radius: 6px;
   font-size: 12px;
@@ -317,7 +319,7 @@ h2 {
   padding: 1px 3px;
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  cursor: default;
 }
 
 .titles:hover {
@@ -341,22 +343,16 @@ h2 {
   bottom: 100%;
   left: 100%;
   margin-left: -60px;
+  transition: 0.3s ease 0s;
 }
 
 .hyperlinks {
   font-size: 16px;
 }
 
-.head {
-  font-weight: bold;
-}
-
 table, th, td {
   border: 1px solid #e0fbfc;
   border-collapse: collapse;
-}
-
-th, td {
   padding: 10px;
 }
 
@@ -371,10 +367,4 @@ table {
 
 table tfoot {
   font-size: 10px;
-}
-
-hr {
-  border: none;
-  height: 0.3px;
-  background-color: #ECF0F1;
 }
