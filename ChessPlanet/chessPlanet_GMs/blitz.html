@@ -61,9 +61,9 @@
     <div class="headings">
       <h1>Grandmasters</h1><br>
       <hr><br>
-      <p>Top 5 GMs in Blitz Chess</p>
+      <p>Top 5 GMs in Blitz Chess</p><br><br>
     </div>
-    <table>
+    <table class="players">
       <thead>
         <tr>
           <th>Rank</th>
@@ -167,11 +167,110 @@
         </tr>
       </tfoot>
     </table>
+    <br>
+    <div id="show">
+      <h3>FIDE Chess Elo Rating System <span id="toggle">+</span></h3>
+      <div class="table">
+        <br>
+        <table class="elo">
+          <thead>
+            <tr>
+              <th>Minimum Rating</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rating">2500+</td>
+              <td>
+                <div class="titles">
+                  <span>GM</span>
+                  <p class="tooltiptext">Grandmaster</p>
+                </div>
+                Grandmaster
+              </td>
+            </tr>
+            <tr>
+              <td class="rating">2400+</td>
+              <td>
+                <div class="titles">
+                  <span>IM</span>
+                  <p class="tooltiptext">International Master</p>
+                </div>
+                International Master
+              </td>
+            </tr>
+            <tr>
+              <td class="rating" rowspan="2">2300+</td>
+              <td>
+                <div class="titles woman">
+                  <span>WGM</span>
+                  <p class="tooltiptext">Woman Grandmaster</p>
+                </div>
+                Woman Grandmaster *
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="titles">
+                  <span>FM</span>
+                  <p class="tooltiptext">FIDE Master</p>
+                </div>
+                FIDE Master
+              </td>
+            </tr>
+            <tr>
+              <td class="rating" rowspan="2">2200+</td>
+              <td>
+                <div class="titles woman">
+                  <span>WIM</span>
+                  <p class="tooltiptext">Woman International Master</p>
+                </div>
+                Woman International Master *
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="titles">
+                  <span>CM</span>
+                  <p class="tooltiptext">Candidate Master</p>
+                </div>
+                Candidate Master
+              </td>
+            </tr>
+            <tr>
+              <td class="rating">2100+</td>
+              <td>
+                <div class="titles woman">
+                  <span>WFM</span>
+                  <p class="tooltiptext">Woman FIDE Master</p>
+                </div>
+                Woman FIDE Master *
+              </td>
+            </tr>
+            <tr>
+              <td class="rating">2000+</td>
+              <td>
+                <div class="titles woman">
+                  <span>WCM</span>
+                  <p class="tooltiptext">Woman Candidate Master</p>
+                </div>
+                Woman Candidate Master *
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="2">* For women only</td>
+          </tfoot>
+        </table>
+        <br>
+      </div>
+    </div>
   </main>
-
   <footer>
     <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
   </footer>
 </body>
+
 
 </html>

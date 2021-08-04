@@ -1,3 +1,4 @@
+// ========== Login & SignUp Window ==========
 function openLogin() {
   document.querySelector(".login-popup").style.display = "flex";
 };
@@ -10,10 +11,10 @@ function openSignUp() {
   document.querySelector(".signup-popup").style.display = "flex";
 };
 
-
 function closeSignUp() {
   document.querySelector(".signup-popup").style.display = "none";
 };
+
 function validate() {
   var username = getElementsById("username").value;
   var password = getElementById("password").value;
@@ -100,3 +101,19 @@ signUpForm.addEventListener('submit', function(e) {
       alert("Please enter your username and password.");
     }
   })
+
+// Others
+var showTable = document.getElementById("show");
+
+showTable.addEventListener('click', () => {
+
+  var plus = document.getElementById("toggle").innerHTML;
+
+  if (plus === "+") {
+    document.querySelector(".table").style.display = "block";
+    document.getElementById("toggle").innerHTML = "–";
+  } else {
+    document.querySelector(".table").style.display = "none";
+    document.getElementById("toggle").innerHTML = "+";
+  }
+});

@@ -24,7 +24,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 20px 10%;
-  background: #24252A;
+  background-color: #24252A;
   z-index: 100;
   box-shadow: 0 0 20px #303f56;
 }
@@ -157,7 +157,6 @@ main {
   padding-bottom: 5%;
   position: relative;
   width: 100%;
-  display: grid;
 }
 
 footer {
@@ -242,7 +241,7 @@ footer {
 }
 
 .mb-3 {
-  background: #555b6e;
+  background-color: #555b6e;
   border-radius: 30px;
   padding: 20px;
   font-size: 100%;
@@ -313,13 +312,20 @@ iframe {
 /*Tool Tip for GM tag*/
 .titles {
   background-color: #b33430;
+  width: 35px;
   border-radius: 6px;
   font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
   font-weight: bolder;
-  padding: 1px 3px;
+  padding: 2px 3px;
   position: relative;
   display: inline-block;
   cursor: default;
+}
+
+.woman {
+  width: 45px;
 }
 
 .titles:hover {
@@ -342,7 +348,7 @@ iframe {
   visibility: visible;
   bottom: 100%;
   left: 100%;
-  margin-left: -60px;
+  margin-left: -70px;
 }
 
 .hyperlinks {
@@ -355,13 +361,62 @@ table, th, td {
   padding: 10px;
 }
 
-tr td:nth-child(4), tr td:nth-child(5), tr td:nth-child(6) {
+.players tr td:nth-child(2) {
+  width: 280px;
+}
+
+.players tr td:nth-child(4), tr td:nth-child(5), tr td:nth-child(6) {
+  width: 100px;
+}
+
+.players tbody tr td:nth-child(1), tr td:nth-child(4), tr td:nth-child(5), tr td:nth-child(6) {
   text-align: center;
 }
 
-table {
+.elo {
   margin-left: auto;
   margin-right: auto;
+}
+
+.elo .rating {
+  text-align: center;
+}
+
+.players, #show {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#show {
+  /*width: 79.35%;*/
+  width: 801.79;
+  position: relative;
+  background-color: rgba(85, 91, 110, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#show:hover {
+  background-color: rgba(85, 91, 110, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease 0s;
+}
+
+#show h3 span {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bolder;
+  right: 15px;
+}
+
+.table {
+  display: none;
+}
+
+caption {
+  text-align: left;
+  padding: 5px;
+  font-size: 20px;
 }
 
 table tfoot {
