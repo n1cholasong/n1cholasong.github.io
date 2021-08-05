@@ -19,9 +19,8 @@ function closeSignUp() {
 var data = localStorage.getItem("users")
 
 if (!data) {
-  data = "[]";
+  data = [];
   localStorage.setItem("users", JSON.stringify(data));
-  data = JSON.parse(data);
 } else {
   data = JSON.parse(data);
 }
