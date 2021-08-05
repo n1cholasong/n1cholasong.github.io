@@ -15,35 +15,6 @@ function closeSignUp() {
   document.querySelector(".signup-popup").style.display = "none";
 };
 
-// Account my version
-var data = localStorage.getItem("users")
-
-if (!data) {
-  data = "[]";
-  localStorage.setItem("users", JSON.stringify(data));
-  data = JSON.parse(data);
-} else {
-  data = JSON.parse(data);
-}
-
-var accountExists = (accounts, username, password) => {
-  for (var i in accounts) {
-    if (accounts[i]["username"] == username && accounts[i]["password"] == password) {
-      return true;
-    }
-  }
-  return false; // Return false once it loop throughs everything.
-}
-
-var usernameExists = (accounts, username) => {
-  for (var i in accounts) {
-    if (accounts[i]["username"] == username) {
-      return true;
-    }
-  }
-  return false;
-}
-
 // Login Menu
 var loginForm = document.getElementById('login');
 
@@ -53,18 +24,36 @@ loginForm.addEventListener('submit', function(e) {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-  if (!username == "" && !password == "") {
-    if (accountExists(data, username, password)) {
-      alert(`Welcome to Chess Planet, ${username}!`);
-      closeLogin();
+  var data = localStorage.getItem("accounts");
 
-    } else {
-      alert("Incorrect username or password.");
-    }
-  } else {
-    alert("Please enter your username and password.")
+  if(!data) {
+    data = "[]"
+    localStorage.setItem("accounts", JSON.stringify(data))
   }
-});
+
+  data = JSON.parse(data);
+
+  function accountExists(accounts, username, password) {
+    for (var i in accounts) {
+      if (accounts[i]["username"] == username && accounts[i]["password"] == password) {
+        return true;
+      }
+    }
+    return false; // Return false once it loop throughts everything.
+  }
+
+    if (!username == "" && !password == "") {
+      if (accountExists(data, username, password)) {
+        alert(`Welcome to Chess Planet, ${username}!`);
+        closeLogin();
+
+      } else {
+        alert("Incorrect username or password.");
+      }
+    } else {
+      alert("Please enter your username and password.")
+    }
+  });
 
 //SignUp Menu
 var signUpForm = document.getElementById('signup')
@@ -78,21 +67,26 @@ signUpForm.addEventListener('submit', function(e) {
 
   console.log(username, password); // for debugging
 
-  if (username != "" && password != "") {
-    if (usernameExists(data, username)) {
-      alert("Username has been taken.");
-
-    } else if (password !== password2) {
-        alert("Password do not match!");
+  if (!username == "" && !password == "") {
+    if (password !== password2) {
+      alert("Password do not match!");
 
     } else {
-      data.push({"username": username, "password": password});
-      localStorage.setItem("users", JSON.stringify(data));
+      var data = localStorage.getItem("accounts");
 
+      if(!data) {
+        data = "[]"
+        localStorage.setItem("accounts", JSON.stringify(data))
+      }
+
+      data = JSON.parse(data);
+      data.push({"username": username, "password": password});
+
+      localStorage.setItem("accounts", JSON.stringify(data));
       alert(`Welcome to Chess Planet, ${username}!`);
       closeSignUp();
-    }
 
+    }
   } else {
     alert("Please enter your username and password.");
   }
