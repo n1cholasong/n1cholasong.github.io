@@ -27,7 +27,7 @@ function validate() {
 };
 
 // Login Menu
-var loginForm = document.getElementById('login')
+var loginForm = document.getElementById('login');
 
 loginForm.addEventListener('submit', function(e) {
   e.preventDefault(); // prevent auto submission of the form
@@ -44,29 +44,27 @@ loginForm.addEventListener('submit', function(e) {
 
   data = JSON.parse(data);
 
-
-
   function accountExists(accounts, username, password) {
-    for(var i in accounts) {
-      if(accounts[i]["username"] == username && accounts[i]["password"] == password) {
+    for (var i in accounts) {
+      if (accounts[i]["username"] == username && accounts[i]["password"] == password) {
         return true;
       }
     }
-    return false;
+    return false; // Return false once it loop throughts everything.
   }
 
-  if (username == "" || password == "") {
-    alert("Please enter your username and password.");
-  }
+    if (!username == "" && !password == "") {
+      if (accountExists(data, username, password)) {
+        alert(`Welcome to Chess Planet, ${username}!`);
+        closeLogin();
 
-  if (accountExists(data, username, password)) {
-    alert(`Welcome to Chess Planet, ${username}!`);
-    closeLogin();
-
-  } else {
-    alert("Incorrect username or password.");
-  }
-})
+      } else {
+        alert("Incorrect username or password.");
+      }
+    } else {
+      alert("Please enter your username and password.")
+    }
+  });
 
 //SignUp Menu
 var signUpForm = document.getElementById('signup')
@@ -74,33 +72,35 @@ var signUpForm = document.getElementById('signup')
 signUpForm.addEventListener('submit', function(e) {
   e.preventDefault();
 
-    var username = document.getElementById('username2').value;
-    var password = document.getElementById('password2').value;
-    var password2 = document.getElementById('password22').value;
-    console.log(username, password);
-    if (!username == "" && !password == "") {
-      if (password !== password2) {
-        alert("Password do not match!");
-      } else {
-        var data = localStorage.getItem("accounts");
+  var username = document.getElementById('newUsername').value;
+  var password = document.getElementById('newPassword').value;
+  var password2 = document.getElementById('newPassword2').value;
 
-        if(!data) {
-          data = "[]"
-          localStorage.setItem("accounts", JSON.stringify(data))
-        }
+  console.log(username, password); // for debugging
 
-        data = JSON.parse(data);
-
-        data.push({"username": username, "password": password});
-
-        localStorage.setItem("accounts", JSON.stringify(data));
-        alert(`Welcome to Chess Planet, ${username}!`);
-      }
+  if (!username == "" && !password == "") {
+    if (password !== password2) {
+      alert("Password do not match!");
 
     } else {
-      alert("Please enter your username and password.");
+      var data = localStorage.getItem("accounts");
+
+      if(!data) {
+        data = "[]"
+        localStorage.setItem("accounts", JSON.stringify(data))
+      }
+
+      data = JSON.parse(data);
+
+      data.push({"username": username, "password": password});
+
+      localStorage.setItem("accounts", JSON.stringify(data));
+      alert(`Welcome to Chess Planet, ${username}!`);
     }
-  })
+  } else {
+    alert("Please enter your username and password.");
+  }
+});
 
 // Others
 var showTable = document.getElementById("show");
@@ -109,7 +109,7 @@ showTable.addEventListener('click', () => {
 
   var plus = document.getElementById("toggle").innerHTML;
 
-  if (plus === "+") {
+  if (plus == "+") {
     document.querySelector(".table").style.display = "block";
     document.getElementById("toggle").innerHTML = "–";
   } else {

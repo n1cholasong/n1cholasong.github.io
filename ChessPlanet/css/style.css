@@ -184,7 +184,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 3.2s ease 0s !important;
 }
 
 .home .textbox {
@@ -199,7 +198,7 @@ footer {
   color: #fec89a;
 }
 
-.home .textbox span {
+.home .textbox h1 span {
   font-size: 2em;
   font-weight: bold;
   color: #fffcf2;
@@ -220,12 +219,41 @@ footer {
   max-width: 100%;
 }
 
-.headings {
-  font-size: 100%;
-  text-align: center;
+.textbox, .imgBox {
+  opacity: 0;
+  animation: floatIn 3.2s ease forwards;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(-35%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 /*========== Basic & Opening Page ==========*/
+.headings {
+  font-size: 100%;
+  text-align: center;
+  display: grid;
+}
+
+.headings h1 {
+  opacity: 0;
+  animation: floatIn 1s ease forwards;
+}
+
+.headings p {
+  margin: auto;
+  max-width: 60%;
+  opacity: 0;
+  animation: floatIn 1.2s ease 0.5s forwards;
+}
+
 .col-md-4, .col-md-6, .col-md-8, .col-md-12 {
   display: grid;
 }
@@ -268,10 +296,18 @@ iframe {
 }
 
 /*========== Play Page ==========*/
+.box {
+  display: grid;
+}
+
 .chessboard {
   position: relative;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  text-align: center;
 }
 
 /*========== Grandmasters Page ==========*/
@@ -393,13 +429,17 @@ table, th, td {
   position: relative;
   background-color: rgba(85, 91, 110, 0.3);
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 #show:hover {
   background-color: rgba(85, 91, 110, 0.4);
   cursor: pointer;
-  transition: 0.3s ease 0s;
+  transition: 0.3s ease;
+}
+
+#show h3 {
+  font-weight: normal;
 }
 
 #show h3 span {
