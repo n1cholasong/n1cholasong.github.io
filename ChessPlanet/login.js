@@ -20,7 +20,7 @@ var data = localStorage.getItem("users")
 
 if (!data) {
   data = [];
-  localStorage.setItem("users", JSON.stringify(data));
+  //localStorage.setItem("users", JSON.stringify(data));
 } else {
   data = JSON.parse(data);
 }
