@@ -18,7 +18,7 @@ $$ |  $$\ $$ |  $$ |$$   ____| \____$$\  \____$$\       $$ |      $$ |$$  __$$ |
 TO VIEW MY WEBSITE:
 ♖ Enter the link: https://n1cholasong.github.io/ChessPlanet/ 
    or
-♖ Open index.html to view the site from the landing page.
+♖ Open index.html to view the site from the home page.
 
 FEATURES:
 ♙ Google Font API - Montserrat Medium 500
