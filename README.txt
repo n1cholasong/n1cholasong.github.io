@@ -26,3 +26,9 @@ FEATURES:
 ♙ Bootstrap grid css (layout) - used in Basic and Opening page 
 ♙ Bootstrap flag css (flag emojis) - used in GMs page
 ♙ Animation using keyframes
+
+
+
+
+
+
