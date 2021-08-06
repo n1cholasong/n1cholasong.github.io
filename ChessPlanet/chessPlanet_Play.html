@@ -25,8 +25,13 @@
         <li><a href="chessPlanet_GMs/classical.html">GMs</a></li>
       </ul>
     </nav>
-    <a class="head" onclick="openLogin()"><button>Login</button></a>
-    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+    <div class="account-buttons">
+      <a class="head" onclick="openLogin()"><button>Login</button></a>
+      <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+    </div>
+    <div class="profile">
+      <a class="profile-menu"><img src="images/user.png" alt="profile"></a>
+    </div>
   </header>
   <div class="account">
     <div class="login-popup">
@@ -48,9 +53,10 @@
         <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
         <label>New account</label>
         <form id="signup" method="POST">
-          <input type="text" id="username" name="username" placeholder="Enter a username">
-          <input type="password" id="password" name="password" placeholder="Enter a password">
-          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <label class="note" for="new-username">Note: This will also be set as your display name.</label>
+          <input type="text" id="new-username" name="new-username" placeholder="Enter a username">
+          <input type="password" id="new-password" name="new-password" placeholder="Enter a password">
+          <input type="password" id="new-password2" name="new-password2" placeholder="Enter password again">
           <input type="submit" class="button" value="Sign Up">
         </form>
       </div>

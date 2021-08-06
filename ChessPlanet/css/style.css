@@ -53,7 +53,7 @@ li, a, button {
   padding: 20px;
 }
 
-.active {
+.nav_links .active {
   color: #457b9d;
 }
 
@@ -120,7 +120,7 @@ button:hover, .button:hover {
 }
 
 .login-page img, .signup-page img {
-  padding-top: 20%;
+  margin: 10%;
   width: 100px;
 }
 
@@ -129,11 +129,25 @@ label {
   font-weight: bold;
 }
 
+.note {
+  font-size: 8.5px;
+}
+
+header .account-buttons {
+  display: flex;
+}
+
+header .profile a img {
+  display: none;
+}
+
 input {
-  width: 200px;
+  width: 230px;
   height: 30px;
   display: block;
-  margin: 15px auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
   color: #24252A;
   font-size: 16px;
   padding: 10px;
@@ -311,6 +325,13 @@ iframe {
 }
 
 /*========== Grandmasters Page ==========*/
+.headings h2 {
+  font-weight: 200;
+  font-size: 22px;
+  opacity: 0;
+  animation: floatIn 1.2s ease 0.5s forwards;
+}
+
 /*Tool Tip for chess modes*/
 .tooltip {
   font-size: 12px;
@@ -345,7 +366,15 @@ iframe {
   left: 100%;
 }
 
-/*Tool Tip for GM tag*/
+.players thead tr th .active {
+  color: #457b9d;
+}
+
+.players tbody tr .active {
+  color: #BFFBFB;
+}
+
+/*Tool Tip for title tag*/
 .titles {
   background-color: #b33430;
   width: 35px;
@@ -387,14 +416,25 @@ iframe {
   margin-left: -70px;
 }
 
-.hyperlinks {
-  font-size: 16px;
-}
-
-table, th, td {
-  border: 1px solid #e0fbfc;
+.players, th, td {
   border-collapse: collapse;
   padding: 10px;
+}
+
+.elo, th, td {
+  padding: 10px;
+}
+
+thead, tfoot {
+  background-color: #232430;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #313343;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2C2E3A;
 }
 
 .players tr td:nth-child(2) {
@@ -409,6 +449,18 @@ table, th, td {
   text-align: center;
 }
 
+.hyperlinks {
+  font-size: 16px;
+}
+
+table tfoot tr td span {
+  float: right;
+}
+
+table tfoot {
+  font-size: 10px;
+}
+
 .elo {
   margin-left: auto;
   margin-right: auto;
@@ -416,6 +468,7 @@ table, th, td {
 
 .elo .rating {
   text-align: center;
+  background-color: #272937 !important;
 }
 
 .players, #show {
@@ -451,14 +504,4 @@ table, th, td {
 
 .table {
   display: none;
-}
-
-caption {
-  text-align: left;
-  padding: 5px;
-  font-size: 20px;
-}
-
-table tfoot {
-  font-size: 10px;
 }

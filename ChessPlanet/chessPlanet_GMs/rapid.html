@@ -26,8 +26,13 @@
         <li><a class="active" href="#">GMs</a></li>
       </ul>
     </nav>
-    <a class="head" onclick="openLogin()"><button>Login</button></a>
-    <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+    <div class="account-buttons">
+      <a class="head" onclick="openLogin()"><button>Login</button></a>
+      <a class="head" onclick="openSignUp()"><button>Sign Up</button></a>
+    </div>
+    <div class="profile">
+      <a class="profile-menu"><img src="../images/user.png" alt="profile"></a>
+    </div>
   </header>
   <div class="account">
     <div class="login-popup">
@@ -49,9 +54,10 @@
         <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
         <label>New account</label>
         <form id="signup" method="POST">
-          <input type="text" id="username" name="username" placeholder="Enter a username">
-          <input type="password" id="password" name="password" placeholder="Enter a password">
-          <input type="password" id="password2" name="password2" placeholder="Enter password again">
+          <label class="note" for="new-username">Note: This will also be set as your display name.</label>
+          <input type="text" id="new-username" name="new-username" placeholder="Enter a username">
+          <input type="password" id="new-password" name="new-password" placeholder="Enter a password">
+          <input type="password" id="new-password2" name="new-password2" placeholder="Enter password again">
           <input type="submit" class="button" value="Sign Up">
         </form>
       </div>
@@ -61,7 +67,7 @@
     <div class="headings">
       <h1>Grandmasters</h1><br>
       <hr><br>
-      <p>Top 5 GMs in Rapid Chess</p><br><br>
+      <h2>Top 5 Grandmasters in Rapid Ghess</h2><br>
     </div>
     <table class="players">
       <thead>
@@ -101,7 +107,7 @@
           </td>
           <td>Norway <i class="norway flag"></i></td>
           <td>2874</td>
-          <td>2881</td>
+          <td class="active">2881</td>
           <td>2886</td>
         </tr>
         <tr>
@@ -115,7 +121,7 @@
           </td>
           <td>China <i class="china flag"></i></td>
           <td>2799</td>
-          <td>2836</td>
+          <td class="active">2836</td>
           <td>2788</td>
         </tr>
         <tr>
@@ -129,7 +135,7 @@
           </td>
           <td>France <i class="france flag"></i></td>
           <td>2749</td>
-          <td>2831</td>
+          <td class="active">2831</td>
           <td>2831</td>
         </tr>
         <tr>
@@ -143,7 +149,7 @@
           </td>
           <td>United States <i class="united states flag"></i></td>
           <td>2736</td>
-          <td>2829</td>
+          <td class="active">2829</td>
           <td>2900</td>
         </tr>
         <tr>
@@ -157,13 +163,13 @@
           </td>
           <td>Russia <i class="russia flag"></i></td>
           <td>2792</td>
-          <td>2791</td>
+          <td class="active">2791</td>
           <td>2807</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="6">Chess ratings are updated as of August 2, 2021</td>
+          <td colspan="6">Click on their names to check their FIDE Bio page.<span>Updated as of August 2, 2021</span></td>
         </tr>
       </tfoot>
     </table>
