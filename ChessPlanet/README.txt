@@ -22,11 +22,11 @@ TO VIEW MY WEBSITE:
 
 FEATURES:
 ♙ Google Font API - Montserrat Medium 500
-♙ Login/Singup using JSON and local storage 
-♙ Bootstrap grid css (layout) - used in Basic and Opening page 
-♙ Bootstrap flag css (flag emojis) - used in GMs page
-♙ Animation using keyframes
-
+♙ Login/Singup with validation using JSON and local storage 
+♙ Bootstrap grid CSS (layout) - used in Basic and Opening page 
+♙ Bootstrap flag CSS (flag emojis) - used in GMs page
+♙ Interactive chessboard using iframe from chessbase.com
+♙ Animation using keyframes and CSS transitions
 
 
 
