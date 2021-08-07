@@ -34,8 +34,8 @@
       <a onclick="openLogin()"><span><button>Login</button></span></a>
       <a onclick="openSignUp()"><span><button>Sign Up</button></span></a>
     </div>
-    <div class="profile">
-      <a class="profile-menu"><img src="images/user.png" alt="profile"></a>
+    <div class="account-menu">
+      <a onclick="openProfile()"><span><button class="profile" id="displayHead">Guest</button></span></a>
     </div>
   </header>
   <div class="account">
@@ -66,6 +66,43 @@
         </form>
       </div>
     </div>
+    <div class="profile-popup">
+      <div class="profile-page">
+        <a class="close" onclick="closeProfile()">+</a>
+        <img src="images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label id="displayProfile">Guest</label>
+        <a onclick="logout()"><button>Log Out</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="login-popup">
+    <div class="login-page">
+      <a class="close" onclick="closeLogin()">+</a>
+      <img src="images/user.png" alt="profile">
+      <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+      <form id="login" method="POST">
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <input type="submit" class="button" value="Login">
+      </form>
+    </div>
+  </div>
+  <div class="signup-popup">
+    <div class="signup-page">
+      <a class="close" onclick="closeSignUp()">+</a>
+      <img src="images/user.png" alt="profile"><br>
+      <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+      <label>New account</label>
+      <form id="signup" method="POST">
+        <label class="note" for="new-username">Note: This will also be set as your display name.</label>
+        <input type="text" id="new-username" name="new-username" placeholder="Enter a username">
+        <input type="password" id="new-password" name="new-password" placeholder="Enter a password">
+        <input type="password" id="new-password2" name="new-password2" placeholder="Enter password again">
+        <input type="submit" class="button" value="Sign Up">
+      </form>
+    </div>
+  </div>
   </div>
   <main>
     <div class="headings">

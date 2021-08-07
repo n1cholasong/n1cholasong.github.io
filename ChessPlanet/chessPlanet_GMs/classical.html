@@ -35,8 +35,8 @@
       <a onclick="openLogin()"><span><button>Login</button></span></a>
       <a onclick="openSignUp()"><span><button>Sign Up</button></span></a>
     </div>
-    <div class="profile">
-      <a class="profile-menu"><img src="../images/user.png" alt="profile"></a>
+    <div class="account-menu">
+      <a onclick="openProfile()"><span><button class="profile" id="displayHead">Guest</button></span></a>
     </div>
   </header>
   <div class="account">
@@ -65,6 +65,15 @@
           <input type="password" id="new-password2" name="new-password2" placeholder="Enter password again">
           <input type="submit" class="button" value="Sign Up">
         </form>
+      </div>
+    </div>
+    <div class="profile-popup">
+      <div class="profile-page">
+        <a class="close" onclick="closeProfile()">+</a>
+        <img src="images/user.png" alt="profile">
+        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <label id="displayProfile">Guest</label>
+        <a onclick="logout()"><button>Log Out</button></a>
       </div>
     </div>
   </div>
