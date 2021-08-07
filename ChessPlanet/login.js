@@ -97,6 +97,16 @@ signUpForm.addEventListener('submit', function(e) {
   }
 });
 
+// Navigation Bar
+var toggleButton = document.getElementsByClassName("toggle-button")[0];
+var navLinks = document.getElementsByTagName("nav")[0];
+var accButtton = document.getElementsByClassName("account-buttons")[0];
+
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  accButtton.classList.toggle('active');
+});
+
 // Others
 var showTable = document.getElementById("show");
 

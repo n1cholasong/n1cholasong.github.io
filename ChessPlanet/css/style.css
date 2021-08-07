@@ -19,7 +19,7 @@ hr {
 
 /*========== Navigation Bar ==========*/
 header {
-  min-width: 100%;
+  /* min-width: 100%; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -29,41 +29,45 @@ header {
   box-shadow: 0 0 20px #303f56;
 }
 
-li, a, button {
-  font-weight: 500;
-  font-size: 14px;
-  color: #ecf0f1;
-  text-decoration: none;
+header a {
+  margin-right: auto;
 }
 
 .logo {
-  position: relative;
   cursor: pointer;
-  margin-right: auto;
-  width: 28%;
-  height: auto;
+  width: 250px;
 }
 
-.nav_links {
+nav .nav_links {
+  /* outline: 1px white solid; */
+  padding: 0;
+  display: flex;
+}
+
+nav li {
   list-style: none;
+  padding: 1rem;
 }
 
-.nav_links li {
-  display: inline-block;
-  padding: 20px;
+nav li a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: block;
+  text-decoration: none;
 }
 
-.nav_links .active {
+nav .active {
   color: #457b9d;
 }
 
-.nav_links li a:hover {
+nav li a:hover {
   color: #457b9d;
   transition: 0.3s ease 0s;
 }
 
-.head button {
+.account-buttons button {
   margin-left: 20px;
+  width: 105px;
 }
 
 button, .button {
@@ -76,12 +80,117 @@ button, .button {
   border-radius: 40px;
   cursor: pointer;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
 button:hover, .button:hover {
   background-color: rgba(238, 108, 77, 0.5);
   color: #fec89a;
   transition: 0.3s ease 0s;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.6rem;
+  right: 10%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav .nav_links {
+    margin-top: 20px;
+  }
+
+  nav .active {
+    background-color: #222222;
+    border-radius: 40px;
+  }
+
+  nav li a:hover {
+    background-color: #222222;
+    border-radius: 40px;
+    transition: 0.3s ease 0s;
+  }
+
+  header {
+    outline: 1px solid white;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 0;
+  }
+
+  nav li a {
+    padding: 0.8rem 1rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .account-buttons {
+    position: absolute;
+    top: 20px;
+    right: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .account-buttons {
+    position: static;
+    margin: auto;
+  }
+
+  .account-buttons button {
+    margin-left: 0;
+  }
+
+  .account-buttons span {
+    display: none;
+    margin: 10px;
+  }
+
+  .account-buttons.active span {
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
+  .imgBox img {
+    display: none;
+  }
+
+  .home .imgBox {
+    position: absolute;
+  }
 }
 
 /*========== Login-SignUp page ==========*/
@@ -189,7 +298,7 @@ footer {
   position: absolute;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 10%;
 }
 
@@ -364,6 +473,10 @@ iframe {
   visibility: visible;
   bottom: 100%;
   left: 100%;
+}
+
+.players a {
+  text-decoration: none;
 }
 
 .players thead tr th .active {
