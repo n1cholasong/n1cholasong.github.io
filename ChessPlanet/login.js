@@ -15,12 +15,33 @@ function closeSignUp() {
   document.querySelector(".signup-popup").style.display = "none";
 };
 
+function openProfile() {
+  document.querySelector(".profile-popup").style.display = "flex";
+};
+
+function closeProfile() {
+  document.querySelector(".profile-popup").style.display = "none";
+};
+
+// Profile
+function showProfile() {
+  document.querySelector(".account-buttons").style.display = "none";
+  document.querySelector(".account-menu").style.display = "flex";
+}
+
+function logout() {
+  document.querySelector(".account-buttons").style.display = "flex";
+  document.querySelector(".account-menu").style.display = "none";
+  closeProfile()
+  alert("You have logged out of Chess Planet. See you next time!")
+
+}
+
 // Account my version
 var data = localStorage.getItem("users")
 
 if (!data) {
   data = [];
-  //localStorage.setItem("users", JSON.stringify(data));
 } else {
   data = JSON.parse(data);
 }
@@ -55,6 +76,9 @@ loginForm.addEventListener('submit', function(e) {
   if (!username == "" && !password == "") {
     if (accountExists(data, username, password)) {
       alert(`Welcome to Chess Planet, ${username}!`);
+      document.getElementById('displayHead').innerHTML = username;
+      document.getElementById('displayProfile').innerHTML = `Hi, ${username}!`;
+      showProfile();
       closeLogin();
 
     } else {
@@ -87,9 +111,9 @@ signUpForm.addEventListener('submit', function(e) {
     } else {
       data.push({"username": username, "password": password});
       localStorage.setItem("users", JSON.stringify(data));
-
       alert(`Welcome to Chess Planet, ${username}!`);
       closeSignUp();
+
     }
 
   } else {
@@ -105,20 +129,4 @@ var accButtton = document.getElementsByClassName("account-buttons")[0];
 toggleButton.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   accButtton.classList.toggle('active');
-});
-
-// Others
-var showTable = document.getElementById("show");
-
-showTable.addEventListener('click', () => {
-
-  var plus = document.getElementById("toggle").innerHTML;
-
-  if (plus == "+") {
-    document.querySelector(".table").style.display = "block";
-    document.getElementById("toggle").innerHTML = "–";
-  } else {
-    document.querySelector(".table").style.display = "none";
-    document.getElementById("toggle").innerHTML = "+";
-  }
 });

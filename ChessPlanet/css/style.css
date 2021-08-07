@@ -19,7 +19,6 @@ hr {
 
 /*========== Navigation Bar ==========*/
 header {
-  /* min-width: 100%; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -39,7 +38,6 @@ header a {
 }
 
 nav .nav_links {
-  /* outline: 1px white solid; */
   padding: 0;
   display: flex;
 }
@@ -71,15 +69,15 @@ nav li a:hover {
 }
 
 button, .button {
-  font-size: 14px;
-  padding: 9px 20px;
-  color: #24252A;
-  font-weight: bold;
-  background-color: rgba(238, 108, 77, 1);
   border: none;
   border-radius: 40px;
-  cursor: pointer;
+  background-color: rgba(238, 108, 77, 1);
+  font-size: 14px;
+  padding: 9px 20px;
   letter-spacing: 1px;
+  color: #24252A;
+  font-weight: bold;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -103,94 +101,33 @@ button:hover, .button:hover {
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: white;
+  background-color: #ECF0F1;
   border-radius: 10px;
 }
 
-@media (max-width: 1200px) {
-  .toggle-button {
-    display: flex;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav .nav_links {
-    margin-top: 20px;
-  }
-
-  nav .active {
-    background-color: #222222;
-    border-radius: 40px;
-  }
-
-  nav li a:hover {
-    background-color: #222222;
-    border-radius: 40px;
-    transition: 0.3s ease 0s;
-  }
-
-  header {
-    outline: 1px solid white;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  nav li {
-    text-align: center;
-    padding: 0;
-  }
-
-  nav li a {
-    padding: 0.8rem 1rem;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .account-buttons {
-    position: absolute;
-    top: 20px;
-    right: 15%;
-  }
+.account-menu, .account-buttons {
+  border: 1px solid white;
 }
 
-@media (max-width: 1000px) {
-  .account-buttons {
-    position: static;
-    margin: auto;
-  }
-
-  .account-buttons button {
-    margin-left: 0;
-  }
-
-  .account-buttons span {
-    display: none;
-    margin: 10px;
-  }
-
-  .account-buttons.active span {
-    display: flex;
-  }
+.profile {
+  margin-left: 20px;
+  border: 5px solid rgba(238, 108, 77, 1);
+  background-color: rgba(238, 108, 77, 0.5);
+  border-radius: 40px;
+  padding: 9px 20px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #e9d8a6;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
-@media (max-width: 750px) {
-  .imgBox img {
-    display: none;
-  }
+.account-menu .profile {}
 
-  .home .imgBox {
-    position: absolute;
-  }
+.profile:hover {
+  background-color: rgba(238, 108, 77, 0.3);
+  text-shadow: 0 0 0.2em #1da9cc;
+  transition: 0.3s ease 0s;
 }
 
 /*========== Login-SignUp page ==========*/
@@ -218,7 +155,19 @@ button:hover, .button:hover {
   z-index: 20;
 }
 
-.login-page, .signup-page {
+.profile-popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 37, 42, 0.9);
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.login-page, .signup-page, .profile-page {
   width: 300px;
   height: 400px;
   background-color: #e9ecef;
@@ -226,10 +175,11 @@ button:hover, .button:hover {
   text-align: center;
   padding: 20px;
   position: relative;
+  display: grid;
 }
 
-.login-page img, .signup-page img {
-  margin: 10%;
+.login-page img, .signup-page img, .profile-page img {
+  margin: auto;
   width: 100px;
 }
 
@@ -242,11 +192,11 @@ label {
   font-size: 9px;
 }
 
-header .account-buttons {
+.account-buttons {
   display: flex;
 }
 
-header .profile a img {
+.account-menu {
   display: none;
 }
 
@@ -292,6 +242,8 @@ footer {
   text-align: center;
   letter-spacing: 1px;
 }
+
+/*========== User Profile ==========*?
 
 /*========== Home Page ==========*/
 .background {
@@ -372,7 +324,7 @@ footer {
 
 .headings p {
   margin: auto;
-  max-width: 60%;
+  max-width: 65%;
   opacity: 0;
   animation: floatIn 1.2s ease 0.5s forwards;
 }
@@ -416,6 +368,30 @@ iframe {
   display: inline-block;
   max-width: 100%;
   max-height: 100%
+}
+
+.backTop {
+  display: block;
+  background-color: #DC3545;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 50px;
+  right: 3%;
+  opacity: 80%;
+}
+
+.backTop img {
+  width: 40px;
+  height: 40px;
+  padding: 13px 7.5px;
+}
+
+.backTop:hover {
+  cursor: pointer;
+  transition: 0.5 ease;
+  opacity: 100%
 }
 
 /*========== Play Page ==========*/
@@ -529,12 +505,7 @@ iframe {
   margin-left: -70px;
 }
 
-.players, th, td {
-  border-collapse: collapse;
-  padding: 10px;
-}
-
-.elo, th, td {
+th, td {
   padding: 10px;
 }
 
@@ -584,14 +555,14 @@ table tfoot {
   background-color: #272937 !important;
 }
 
-.players, #show {
+.tables {
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
 }
 
 #show {
-  /*width: 79.35%;*/
-  width: 801.81px;
+  width: 100%;
   position: relative;
   background-color: rgba(85, 91, 110, 0.3);
   border-radius: 5px;
@@ -617,4 +588,152 @@ table tfoot {
 
 .table {
   display: none;
+}
+
+/*========== Responsive ==========*/
+/* @media (max-width: 1336px) {
+  th, td {
+    padding: 5px;
+  }
+} */
+@media (max-width: 1200px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav .nav_links {
+    margin-top: 20px;
+  }
+
+  nav .active {
+    background-color: #222222;
+    border-radius: 40px;
+  }
+
+  nav li a:hover {
+    background-color: #222222;
+    border-radius: 40px;
+    transition: 0.3s ease 0s;
+  }
+
+  header {
+    outline: 1px solid white;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 0;
+  }
+
+  nav li a {
+    padding: 0.8rem 1rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .account-buttons {
+    position: absolute;
+    top: 20px;
+    right: 15%;
+  }
+
+  .account-menu {
+    position: absolute;
+    top: 15px;
+    right: 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .account-buttons {
+    position: static;
+    margin: auto;
+  }
+
+  .account-menu {
+    position: absolute;
+    top: 15px;
+    right: 17%;
+  }
+
+  .account-buttons button {
+    margin-left: 0;
+  }
+
+  .account-buttons span {
+    display: none;
+    margin: 10px;
+  }
+
+  .account-buttons.active span {
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
+  .imgBox img {
+    display: none;
+  }
+
+  .home .imgBox {
+    position: absolute;
+  }
+}
+
+@media (max-width: 530px) {
+  .account-menu {
+    position: static;
+    margin: auto;
+  }
+
+  .account-menu .profile {
+    margin-left: 0;
+  }
+
+  .account-menu span {
+    display: none;
+    margin: 10px;
+  }
+
+  .account-menu.active span {
+    display: flex;
+  }
+
+  .headings {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 424px) {
+  .headings {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    width: 80%;
+  }
+
+  .toggle-button {
+    top: 1.3rem;
+  }
+
+  .headings {
+    font-size: 50%;
+  }
 }
