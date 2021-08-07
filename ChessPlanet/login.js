@@ -23,7 +23,7 @@ function closeProfile() {
   document.querySelector(".profile-popup").style.display = "none";
 };
 
-// Profile
+// ========== Profile ==========
 function showProfile() {
   document.querySelector(".account-buttons").style.display = "none";
   document.querySelector(".account-menu").style.display = "flex";
@@ -36,6 +36,9 @@ function logout() {
   alert("You have logged out of Chess Planet. See you next time!")
 
 }
+
+// Login status
+
 
 // Account my version
 var data = localStorage.getItem("users")
@@ -64,7 +67,7 @@ var usernameExists = (accounts, username) => {
   return false;
 }
 
-// Login Menu
+// ========== Login Menu ==========
 var loginForm = document.getElementById('login');
 
 loginForm.addEventListener('submit', function(e) {
@@ -89,7 +92,7 @@ loginForm.addEventListener('submit', function(e) {
   }
 });
 
-//SignUp Menu
+//========== SignUp Menu ==========
 var signUpForm = document.getElementById('signup')
 
 signUpForm.addEventListener('submit', function(e) {
@@ -121,12 +124,14 @@ signUpForm.addEventListener('submit', function(e) {
   }
 });
 
-// Navigation Bar
+// ========== Navigation Bar toggles ==========
 var toggleButton = document.getElementsByClassName("toggle-button")[0];
 var navLinks = document.getElementsByTagName("nav")[0];
 var accButtton = document.getElementsByClassName("account-buttons")[0];
+var profileButton = document.getElementsByClassName("account-menu")[0];
 
-toggleButton.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  accButtton.classList.toggle('active');
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  accButtton.classList.toggle("active");
+  profileButton.classList.toggle("active");
 });

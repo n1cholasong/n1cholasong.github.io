@@ -105,6 +105,16 @@ button:hover, .button:hover {
   border-radius: 10px;
 }
 
+/* Button Display */
+.account-buttons {
+  display: flex;
+}
+
+.account-menu {
+  display: none;
+}
+
+/*========== User Profile ==========*/
 .account-menu, .account-buttons {
   border: 1px solid white;
 }
@@ -122,15 +132,13 @@ button:hover, .button:hover {
   cursor: pointer;
 }
 
-.account-menu .profile {}
-
 .profile:hover {
   background-color: rgba(238, 108, 77, 0.3);
   text-shadow: 0 0 0.2em #1da9cc;
   transition: 0.3s ease 0s;
 }
 
-/*========== Login-SignUp page ==========*/
+/*========== Login-SignUp & Profile page ==========*/
 .login-popup {
   width: 100%;
   height: 100%;
@@ -192,14 +200,6 @@ label {
   font-size: 9px;
 }
 
-.account-buttons {
-  display: flex;
-}
-
-.account-menu {
-  display: none;
-}
-
 input {
   width: 230px;
   height: 30px;
@@ -242,8 +242,6 @@ footer {
   text-align: center;
   letter-spacing: 1px;
 }
-
-/*========== User Profile ==========*?
 
 /*========== Home Page ==========*/
 .background {
@@ -591,11 +589,6 @@ table tfoot {
 }
 
 /*========== Responsive ==========*/
-/* @media (max-width: 1336px) {
-  th, td {
-    padding: 5px;
-  }
-} */
 @media (max-width: 1200px) {
   .toggle-button {
     display: flex;
