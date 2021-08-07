@@ -115,10 +115,6 @@ button:hover, .button:hover {
 }
 
 /*========== User Profile ==========*/
-.account-menu, .account-buttons {
-  border: 1px solid white;
-}
-
 .profile {
   margin-left: 20px;
   border: 5px solid rgba(238, 108, 77, 1);
