@@ -22,8 +22,10 @@ TO VIEW MY WEBSITE:
 
 FEATURES:
 ♙ Google Font API - Montserrat Medium 500
-♙ Login/SignUp with validation using JSON and local storage
+♙ Responsive navigation bar using media queries 
+♙ Login/SignUp with validation using JSON, local storage and session storage
 ♙ Bootstrap grid CSS (layout) - used in Basic and Opening page
 ♙ Bootstrap flag CSS (flag emojis) - used in GMs page
+♙ Videos embeded using iframe from youtube.com
 ♙ Interactive chessboard using iframe from chessbase.com
 ♙ Animation using keyframes and CSS transitions
