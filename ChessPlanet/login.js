@@ -1,7 +1,7 @@
-// Load the state
+// Loads the state of login to be reflected on each site
 loaded();
 
-// ========== Login & SignUp Window ==========
+// ========== Login-SignUp & Profile Window ==========
 function openLogin() {
   document.querySelector(".login-popup").style.display = "flex";
 };
@@ -26,18 +26,24 @@ function closeProfile() {
   document.querySelector(".profile-popup").style.display = "none";
 };
 
-// ========== Profile ==========
-function showProfile() {
-  document.querySelector(".account-buttons").style.display = "none";
-  document.querySelector(".account-menu").style.display = "flex";
-};
-
-// login Variables
+// ========== Profile Page ==========
 function updateDisplay(username) {
    document.getElementById('displayHead').innerHTML = username;
    document.getElementById('displayProfile').innerHTML = `Hi, ${username}!`
 };
 
+function showProfile() {
+  document.querySelector(".account-buttons").style.display = "none";
+  document.querySelector(".account-menu").style.display = "flex";
+};
+
+// ========== Login Status ==========
+function createSession(username) {
+  var state = {username: username, loggedIn: true};
+  sessionStorage.setItem(username, true);
+};
+
+// Ends session when logged out
 function logout() {
   document.querySelector(".account-buttons").style.display = "flex";
   document.querySelector(".account-menu").style.display = "none";
@@ -46,14 +52,7 @@ function logout() {
   sessionStorage.clear();
 };
 
-// User Session
-
-function createSession(username) {
-  var state = {username: username, loggedIn: true};
-  sessionStorage.setItem(username, true);
-};
-
-// Login Status
+// Logged In Status
 function loaded() {
   for (var i in sessionStorage) {
     var key = sessionStorage.key(i);
@@ -118,7 +117,7 @@ loginForm.addEventListener('submit', function(e) {
   }
 });
 
-//========== SignUp Menu ==========
+// ========== SignUp Menu ==========
 var signUpForm = document.getElementById('signup')
 
 signUpForm.addEventListener('submit', function(e) {
@@ -142,6 +141,7 @@ signUpForm.addEventListener('submit', function(e) {
       localStorage.setItem("users", JSON.stringify(data));
       alert(`Welcome to Chess Planet, ${username}!`);
       createSession(username);
+      // Logs in user when they SignUp
       updateDisplay(username);
       showProfile();
       closeSignUp();

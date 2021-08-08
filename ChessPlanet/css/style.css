@@ -68,7 +68,8 @@ nav li a:hover {
   width: 105px;
 }
 
-button, .button {
+button,
+.button {
   border: none;
   border-radius: 40px;
   background-color: rgba(238, 108, 77, 1);
@@ -81,7 +82,8 @@ button, .button {
   text-decoration: none;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: rgba(238, 108, 77, 0.5);
   color: #fec89a;
   transition: 0.3s ease 0s;
@@ -171,7 +173,9 @@ button:hover, .button:hover {
   z-index: 20;
 }
 
-.login-page, .signup-page, .profile-page {
+.login-page,
+.signup-page,
+.profile-page {
   width: 300px;
   height: 400px;
   background-color: #e9ecef;
@@ -182,7 +186,9 @@ button:hover, .button:hover {
   display: grid;
 }
 
-.login-page img, .signup-page img, .profile-page img {
+.login-page img,
+.signup-page img,
+.profile-page img {
   margin: auto;
   width: 100px;
 }
@@ -323,7 +329,10 @@ footer {
   animation: floatIn 1.2s ease 0.5s forwards;
 }
 
-.col-md-4, .col-md-6, .col-md-8, .col-md-12 {
+.col-md-4,
+.col-md-6,
+.col-md-8,
+.col-md-12 {
   display: grid;
 }
 
@@ -421,6 +430,7 @@ iframe {
 
 .tooltip a {
   font-weight: bold;
+  color: #F1EFE4;
 }
 
 .tooltip .tooltiptext {
@@ -435,7 +445,7 @@ iframe {
 }
 
 .hyperlinks:hover {
-  color: #457b9d;
+  color: ##457b9d;
   transition: 0.3s ease 0s;
 }
 
@@ -507,6 +517,10 @@ thead, tfoot {
   background-color: #232430;
 }
 
+table th, tfoot td {
+  color: #F1EFE4;
+}
+
 tbody tr:nth-child(odd) {
   background-color: #313343;
 }
@@ -519,11 +533,16 @@ tbody tr:nth-child(even) {
   width: 280px;
 }
 
-.players tr td:nth-child(4), tr td:nth-child(5), tr td:nth-child(6) {
+.players tr td:nth-child(4),
+tr td:nth-child(5),
+tr td:nth-child(6) {
   width: 100px;
 }
 
-.players tbody tr td:nth-child(1), tr td:nth-child(4), tr td:nth-child(5), tr td:nth-child(6) {
+.players tbody tr td:nth-child(1),
+tr td:nth-child(4),
+tr td:nth-child(5),
+tr td:nth-child(6) {
   text-align: center;
 }
 
@@ -533,6 +552,7 @@ tbody tr:nth-child(even) {
 
 table tfoot tr td span {
   float: right;
+  color: #F1EFE4;
 }
 
 table tfoot {
@@ -644,6 +664,122 @@ table tfoot {
     position: absolute;
     top: 15px;
     right: 15%;
+  }
+
+  /* ========== Responsive Table ========== */
+  .elo thead {
+    display: none;
+  }
+
+  .players thead {
+    position: relative;
+  }
+
+  .players thead th {
+    text-align: left;
+  }
+
+  .players thead th:first-child,
+  .players thead th:nth-child(2),
+  .players thead th:nth-child(3) {
+    display: none;
+  }
+
+  .players thead th:nth-child(4),
+  .players thead th:nth-child(5),
+  .players thead th:nth-child(6) {
+    display: inline-block;
+    background-color: #272937;
+  }
+
+  .tables {
+    width: 100%;
+  }
+
+  .players {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .players tbody tr td:first-child {
+    text-align: left;
+    color: #B7B6B2;
+  }
+
+  .players tr td:nth-child(2),
+  .players tr td:nth-child(3),
+  .players tr td:nth-child(4),
+  .players tr td:nth-child(5),
+  .players tr td:last-child {
+    width: 100%;
+    text-align: right;
+  }
+
+  td {
+    display: block;
+  }
+
+  td:first-child {
+    background-color: #232430;
+  }
+
+  .players td:nth-child(2), tr {
+    /* outline: 1px solid white; */
+  }
+
+  .players tbody td:first-child::before {
+    content: "Rank #";
+    color: #B7B6B2;
+    float: left;
+    letter-spacing: 2px
+  }
+
+  .players td:nth-child(2)::before {
+    content: "Name: ";
+  }
+
+  .players td:nth-child(3)::before {
+    content: "Country: ";
+  }
+
+  .players td:nth-child(4)::before,
+  .players td:nth-child(5)::before,
+  .players td:nth-child(6)::before {
+    content: "Ratings: ";
+  }
+
+  .players tbody .active:nth-child(4),
+  .players tbody .active:nth-child(5),
+  .players tbody .active:nth-child(6) {
+    display: block;
+  }
+
+  .players tbody .normal:nth-child(4),
+  .players tbody .normal:nth-child(5),
+  .players tbody .normal:nth-child(6) {
+    display: none;
+  }
+
+  .players td::before {
+    color: #F1EFE4;
+    font-weight: bold;
+    float: left;
+  }
+
+  .elo tbody td {
+    background-color: #313343;
+    text-align: center;
+  }
+
+  .elo .rating::before {
+    content: "Min. Rating: ";
+    color: #B7B6B2;
+    font-weight: bold;
+  }
+
+  .elo .rating {
+    background-color: #272937 !important;
+    color: #F1EFE4;
   }
 }
 
