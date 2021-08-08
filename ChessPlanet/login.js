@@ -1,3 +1,6 @@
+// Load the state
+loaded();
+
 // ========== Login & SignUp Window ==========
 function openLogin() {
   document.querySelector(".login-popup").style.display = "flex";
@@ -27,21 +30,44 @@ function closeProfile() {
 function showProfile() {
   document.querySelector(".account-buttons").style.display = "none";
   document.querySelector(".account-menu").style.display = "flex";
-}
+};
+
+// login Variables
+function updateDisplay(username) {
+   document.getElementById('displayHead').innerHTML = username;
+   document.getElementById('displayProfile').innerHTML = `Hi, ${username}!`
+};
 
 function logout() {
   document.querySelector(".account-buttons").style.display = "flex";
   document.querySelector(".account-menu").style.display = "none";
   closeProfile()
   alert("You have logged out of Chess Planet. See you next time!")
+  sessionStorage.clear();
+};
 
-}
+// User Session
 
-// Login status
+function createSession(username) {
+  var state = {username: username, loggedIn: true};
+  sessionStorage.setItem(username, true);
+};
 
+// Login Status
+function loaded() {
+  for (var i in sessionStorage) {
+    var key = sessionStorage.key(i);
+    var value = sessionStorage.getItem(key);
+    console.log(key, value); // for debuging
+    if (value === "true") {
+      updateDisplay(key);
+      showProfile();
+    }
+  }
+};
 
 // Account my version
-var data = localStorage.getItem("users")
+var data = localStorage.getItem("users");
 
 if (!data) {
   data = [];
@@ -56,7 +82,7 @@ var accountExists = (accounts, username, password) => {
     }
   }
   return false; // Return false once it loop throughs everything.
-}
+};
 
 var usernameExists = (accounts, username) => {
   for (var i in accounts) {
@@ -65,7 +91,7 @@ var usernameExists = (accounts, username) => {
     }
   }
   return false;
-}
+};
 
 // ========== Login Menu ==========
 var loginForm = document.getElementById('login');
@@ -79,8 +105,8 @@ loginForm.addEventListener('submit', function(e) {
   if (!username == "" && !password == "") {
     if (accountExists(data, username, password)) {
       alert(`Welcome to Chess Planet, ${username}!`);
-      document.getElementById('displayHead').innerHTML = username;
-      document.getElementById('displayProfile').innerHTML = `Hi, ${username}!`;
+      createSession(username);
+      updateDisplay(username);
       showProfile();
       closeLogin();
 
@@ -115,8 +141,10 @@ signUpForm.addEventListener('submit', function(e) {
       data.push({"username": username, "password": password});
       localStorage.setItem("users", JSON.stringify(data));
       alert(`Welcome to Chess Planet, ${username}!`);
+      createSession(username);
+      updateDisplay(username);
+      showProfile();
       closeSignUp();
-
     }
 
   } else {
