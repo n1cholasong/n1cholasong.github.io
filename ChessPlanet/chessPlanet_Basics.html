@@ -210,13 +210,31 @@
         </div>
       </div>
     </div>
-    <div class="backTop">
-      <a href="#top"><img src="images/top.png" alt="up"></a>
-    </div>
+    <button onclick="backTop()" id="goTop"><img src="images/top.png" alt="up"></button>
   </main>
   <footer>
     <h6>Nicholas Ong &copy 2021 All Rights Reserved.</h6>
   </footer>
+  <script>
+    var mybutton = document.getElementById("goTop");
+
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
+        mybutton.style.display = "flex";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function backTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 
 </html>
