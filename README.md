@@ -6,9 +6,12 @@ A static website designed to teach newcomers and beginners the basics of chess a
 https://n1cholasong.github.io/ChessPlanet/
 
 
+
 ♘ Logo and chess pieces are all designed by me.
 
+
 FEATURES:
+
 ♙ Google Font API - Montserrat Medium 500
 
 ♙ Responsive navigation bar using media queries 
