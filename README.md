@@ -2,16 +2,17 @@
 
 A static website designed to teach newcomers and beginners the basics of chess and the strategies
 
+<br>
 
 ♘ Logo and chess pieces are all designed by me.
 
+<br>
 
 ♖ Hosted on Github:
 https://n1cholasong.github.io/ChessPlanet/
 
-
-
-
+<br>
+<br>
 
 FEATURES:
 
@@ -31,9 +32,8 @@ FEATURES:
 
 ♙ Animation using keyframes and CSS transitions
 
-
-
-
+<br>
+<br>
 
 Screenshots:
 
