@@ -2,19 +2,27 @@
 
 A static website designed to teach newcomers and beginners the basics of chess and the strategies
 
-♘ Logo and chess pieces are all designed by me.
-
 ♖ Hosted on Github:
 https://n1cholasong.github.io/ChessPlanet/
 
+
+♘ Logo and chess pieces are all designed by me.
+
 FEATURES:
 ♙ Google Font API - Montserrat Medium 500
+
 ♙ Responsive navigation bar using media queries 
+
 ♙ Login/SignUp with validation using JSON, local storage and session storage
+
 ♙ Bootstrap grid CSS (layout) - used in Basic and Opening page
+
 ♙ Bootstrap flag CSS (flag emojis) - used in GMs page
+
 ♙ Videos embeded using iframe from youtube.com
+
 ♙ Interactive chessboard using iframe from chessbase.com
+
 ♙ Animation using keyframes and CSS transitions
 
 Screenshots:
