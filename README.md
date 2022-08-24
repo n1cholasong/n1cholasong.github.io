@@ -1,6 +1,6 @@
 # Chess Planet
+
 A static website designed to teach newcomers and beginners the basics of chess and the strategies
-"""
 ============================================================
    ____ _                     ____  _                  _    
   / ___| |__   ___  ___ ___  |  _ \| | __ _ _ __   ___| |_  
@@ -8,7 +8,7 @@ A static website designed to teach newcomers and beginners the basics of chess a
  | |___| | | |  __/\__ \__ \ |  __/| | (_| | | | |  __/ |_  
   \____|_| |_|\___||___/___/ |_|   |_|\__,_|_| |_|\___|\__| 
 ============================================================
-"""
+
 ♘ Logo and chess pieces are all designed by me.
 
 ♖ Hosted on Github:
