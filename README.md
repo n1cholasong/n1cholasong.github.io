@@ -1,13 +1,13 @@
 # Chess Planet
 A static website designed to teach newcomers and beginners the basics of chess and the strategies
 """
-\============================================================
-\   ____ _                     ____  _                  _   
-\  / ___| |__   ___  ___ ___  |  _ \| | __ _ _ __   ___| |_ 
-\ | |   | '_ \ / _ \/ __/ __| | |_) | |/ _` | '_ \ / _ \ __|
-\ | |___| | | |  __/\__ \__ \ |  __/| | (_| | | | |  __/ |_ 
-\  \____|_| |_|\___||___/___/ |_|   |_|\__,_|_| |_|\___|\__|
-\============================================================
+\============================================================\n
+\   ____ _                     ____  _                  _    \n
+\  / ___| |__   ___  ___ ___  |  _ \| | __ _ _ __   ___| |_  \n
+\ | |   | '_ \ / _ \/ __/ __| | |_) | |/ _` | '_ \ / _ \ __| \n
+\ | |___| | | |  __/\__ \__ \ |  __/| | (_| | | | |  __/ |_  \n
+\  \____|_| |_|\___||___/___/ |_|   |_|\__,_|_| |_|\___|\__| \n
+\============================================================\n
 
 ♘ Logo and chess pieces are all designed by me.
 
@@ -36,7 +36,7 @@ Chess Openings (strategy)
 <img src="/screenshots/chess-opening.png">
 
 Gameplay
-<img src="/screenshots/Gameplay.png">
+<img src="/screenshots/gameplay.png">
 
 Grandmaster List
 <img src="/screenshots/grandmaster.png">
