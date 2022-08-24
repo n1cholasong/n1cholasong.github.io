@@ -1,10 +1,13 @@
-============================================================
-   ____ _                     ____  _                  _   
-  / ___| |__   ___  ___ ___  |  _ \| | __ _ _ __   ___| |_ 
- | |   | '_ \ / _ \/ __/ __| | |_) | |/ _` | '_ \ / _ \ __|
- | |___| | | |  __/\__ \__ \ |  __/| | (_| | | | |  __/ |_ 
-  \____|_| |_|\___||___/___/ |_|   |_|\__,_|_| |_|\___|\__|
-============================================================
+# Chess Planet
+A static website designed to teach newcomers and beginners the basics of chess and the strategies
+"""
+\============================================================
+\   ____ _                     ____  _                  _   
+\  / ___| |__   ___  ___ ___  |  _ \| | __ _ _ __   ___| |_ 
+\ | |   | '_ \ / _ \/ __/ __| | |_) | |/ _` | '_ \ / _ \ __|
+\ | |___| | | |  __/\__ \__ \ |  __/| | (_| | | | |  __/ |_ 
+\  \____|_| |_|\___||___/___/ |_|   |_|\__,_|_| |_|\___|\__|
+\============================================================
 
 ♘ Logo and chess pieces are all designed by me.
 
@@ -24,16 +27,16 @@ FEATURES:
 Screenshots:
 
 Home Page
-<img src="/Screenshots/home-page.png">
+<img src="/screenshots/home-page.png">
 
 Chess Basics
-<img src="/Screenshots/basic-of-chess.png">
+<img src="/screenshots/basic-of-chess.png">
 
 Chess Openings (strategy)
-<img src="/Screenshots/chess-opening.png">
+<img src="/screenshots/chess-opening.png">
 
 Gameplay
-<img src="/Screenshots/Gameplay.png">
+<img src="/screenshots/Gameplay.png">
 
 Grandmaster List
-<img src="/Screenshots/grandmaster.png">
+<img src="/screenshots/grandmaster.png">
