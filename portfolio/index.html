@@ -75,28 +75,34 @@
             <div class="greetings text-center">
                 <h1 class="fw-bold">Hello! I'm Nicholas&nbsp;Ong</h1>
                 <h3 class="fw-semibold">Student / Gamer / Aspiring Software Engineer / Cat Lover</h3>
+                <div class="scroll">
+                    <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
+                </div>
             </div>
         </section>
         <section id="about" class="about">
             <div class="about-grid">
                 <div class="intro">
-                    <h1><i class="fa-solid fa-hashtag"></i> about_me</h1>
+                    <h1><i class="fa-solid fa-hashtag"></i>&nbsp;about_me</h1>
                     <p class="text">
                         Hi my name is Nicholas Ong, a fresh graduate from Nanyang Polytechnic. I'm an enthusiastic
                         learner with a strong desire for continuous improvement.
                     </p>
-                    <div>
-                        <a href="public/docs/NicholasOng_Official_Transcript_of_Academic_Record.pdf" target="_blank" class="btn btn-success rounded-pill me-2">get_transcript(&nbsp;)</a>
+                    <div class="pt-3">
+                        <a href="public/docs/NicholasOng_Official_Transcript_of_Academic_Record.pdf" target="_blank"
+                            class="btn btn-success rounded-pill me-2 px-4">get_academic_transcript(&nbsp;)</a>
+                        <a href="public/docs/NicholasOng_Official_Transcript_of_Co-Curricular_Activities.pdf"
+                            target="_blank" class="btn btn-success rounded-pill px-4">get_cca_transcript(&nbsp;)</a>
                     </div>
-                    
+
                 </div>
                 <div class="picture-frame">
-                    <img src="public/img/nicholas_raincoat.png" alt="Nicholas Ong" class="me">
+                    <img src="public/img/nicholas_ong_nyp_graduate.JPG" alt="Nicholas Ong" class="me">
                 </div>
             </div>
         </section>
         <section id="projects" class="projects">
-            <h1><i class="fa-solid fa-hashtag"></i> projects</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;projects</h1>
             <div class="card-grid">
                 <div class="card mb-3">
                     <div id="fluentCalendar" class="card-img-top"></div>
@@ -106,19 +112,27 @@
                             A shift scheduling web app that I have built for MakerspaceNYP to generate monthly duty
                             roster for Student Assistant Coaches.
                         </p>
+                        <div class="card-cta">
+                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                                data-bs-target="#adminPlanner">
+                                more(&nbsp;)
+                            </button>
+                        </div>
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <img src="public/img/assets/chess_pawn_3d.png" class="card-img-top" alt="chess planet"
-                        width="256px">
+                    <img src="public/img/assets/chess_pawn_3d.png" id="fluentChess" class="card-img-top"
+                        alt="chess planet" width="256px">
                     <div class="glass-card-body glass">
                         <h5 class="card-title fw-bold">Chess Planet</h5>
                         <p class="card-text">
-                            A static webpage designed to teach beginners the basics of chess and the various chess opening strategies. You can also test your skills against other players online!
+                            A static webpage designed to teach beginners the basics of chess and the various chess
+                            opening strategies. You can also test your skills against other players online!
                         </p>
-                        <div class="">
-                            <a href="https://n1cholasong.github.io/ChessPlanet/" target="_blank" class="btn btn-success rounded-pill w-100">explore(&nbsp;)</a>
+                        <div class="card-cta">
+                            <a href="https://n1cholasong.github.io/ChessPlanet/" target="_blank"
+                                class="btn btn-success rounded-pill px-4 ">explore(&nbsp;)</a>
                         </div>
 
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -129,15 +143,76 @@
                     <div class="glass-card-body glass fluent-compass">
                         <h5 class="card-title fw-bold">A-Star Pathing Visualizer</h5>
                         <p class="card-text">
-                            A python script that utilizes the A-star algorithm to find the shortest path between two points on a map. It takes a contour map as input and visualizes the path with a 3D graph using <a href="https://matplotlib.org/">Matplotlib</a>.
+                            A python script that utilizes the A-star algorithm to find the shortest path between two
+                            points on a map. It takes a contour map as input and visualizes the path with a 3D graph
+                            using <a href="https://matplotlib.org/">Matplotlib</a>.
                         </p>
+                        <div class="card-cta">
+                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                                data-bs-target="#aStar">
+                                more(&nbsp;)
+                            </button>
+                        </div>
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="adminPlanner" tabindex="-1" aria-labelledby="adminPlannerDemo"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <h1 class="modal-title fs-5" id="adminPlannerDemo">Admin Planner</h1>
+                            <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
+                                class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a>
+
+                            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>How it works?</h5>
+
+                            <ol class="mt-3">
+                                <li>First click go the submit availabilities page.</li>
+                                <img src="public/img/screenshots/admin-planner_demo_1.png" alt="">
+                                <li>Select the month you wish to be scheduled for duty.</li>
+                                <img src="public/img/screenshots/admin-planner_demo_2.png" alt="">
+                                <li>Then select the the shifts that you are available for duty</li>
+                                <img src="public/img/screenshots/admin-planner_demo_3.png" alt="">
+                                <li>Hit submit when ready. You will see a confirmation message.</li>
+                                <img src="public/img/screenshots/admin-planner_demo_4.png" alt="">
+                                <li>Head to the SAC Availability page to view your submited availabilities. You can also
+                                    view availabilities submited by others too!</li>
+                                <img src="public/img/screenshots/admin-planner_demo_5.png" alt="">
+                            </ol>
+                        </div>
+                        <div class="modal-footer">
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="aStar" tabindex="-1" aria-labelledby="aStarDemo" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="aStarDemo">A-Star Pathing Visualizer</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            ...
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="work" class="work">
-            <h1><i class="fa-solid fa-hashtag"></i> professional_experience</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;professional_experience</h1>
             <div>
 
                 <button class="btn btn-toggle mb-4 p-3 d-flex justify-content-between glass" type="button"
@@ -194,19 +269,17 @@
             </div>
         </section>
         <section id="certs" class="certs">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i> certifications</h1>
+            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;certifications</h1>
             <div class="cert-gallery">
                 <div class="ACA-Cloud-Computing">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-1">
-                        <div class="frame-holder">
-                            <img class="cert" src="public/img/certifications/ACA CloudComputing.png"
-                                alt="ACA Cloud Computing">
-                            <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
-                            <div class="backing"></div>
-                        </div>
+                        <img class="cert" src="public/img/certifications/ACA CloudComputing.png"
+                            alt="ACA Cloud Computing">
+                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <div class="backing"></div>
                     </button>
-                    <h5 class="text-center mt-1">ACA Cloud Computing</h5>
+                    <h5 class="text-center mt-2">ACA Cloud Computing</h5>
 
                     <!-- Modal -->
                     <div class="modal fade" id="cert-1" tabindex="-1" aria-labelledby="ACACloudComputing"
@@ -234,13 +307,11 @@
                 <div class="NYP-Star-Awards">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-2">
-                        <div class="frame-holder">
-                            <img class="cert" src="public/img/certifications/STAR Awards.jpg" alt="NYP STAR Awards">
-                            <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
-                            <div class="backing"></div>
-                        </div>
+                        <img class="cert" src="public/img/certifications/STAR Awards.jpg" alt="NYP STAR Awards">
+                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <div class="backing"></div>
                     </button>
-                    <h5 class="text-center mt-1">NYP STAR Awards [Merit]</h5>
+                    <h5 class="text-center mt-2">NYP STAR Awards [Merit]</h5>
                     <!-- Modal -->
                     <div class="modal fade" id="cert-2" tabindex="-1" aria-labelledby="NYPSTARAwards"
                         aria-hidden="true">
@@ -267,14 +338,11 @@
                 <div class="TikTok-Youth-Camp">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-3">
-                        <div class="frame-holder">
-                            <img class="cert" src="public/img/certifications/TikTok YouthCamp.png"
-                                alt="TikTok YouthCamp">
-                            <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
-                            <div class="backing"></div>
-                        </div>
+                        <img class="cert" src="public/img/certifications/TikTok YouthCamp.png" alt="TikTok YouthCamp">
+                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <div class="backing"></div>
                     </button>
-                    <h5 class="text-center mt-1">TikTok YouthCamp</h5>
+                    <h5 class="text-center mt-2">TikTok YouthCamp</h5>
                     <!-- Modal -->
                     <div class="modal fade" id="cert-3" tabindex="-1" aria-labelledby="TikTokYouthCamp"
                         aria-hidden="true">
@@ -301,14 +369,12 @@
                 <div class="Singtel-Cyber-Experience">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-4">
-                        <div class="frame-holder">
-                            <img class="cert" src="public/img/certifications/Singtel CyberExperience.jpeg"
-                                alt="Singtel Cyber Experience">
-                            <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
-                            <div class="backing"></div>
-                        </div>
+                        <img class="cert" src="public/img/certifications/Singtel CyberExperience.jpeg"
+                            alt="Singtel Cyber Experience">
+                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <div class="backing"></div>
                     </button>
-                    <h5 class="text-center mt-1">Singtel CyberExperience</h5>
+                    <h5 class="text-center mt-2">Singtel CyberExperience</h5>
 
                     <!-- Modal -->
                     <div class="modal fade" id="cert-4" tabindex="-1" aria-labelledby="SingtelCyberExperience"
@@ -336,14 +402,12 @@
                 <div class="ComTIA-IT-Fundamentals">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-5">
-                        <div class="frame-holder">
-                            <img class="cert" src="public/img/certifications/ComTIA IT Fundamentals.jpg"
-                                alt="ComTIA IT Fundamentals">
-                            <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
-                            <div class="backing"></div>
-                        </div>
+                        <img class="cert" src="public/img/certifications/ComTIA IT Fundamentals.jpg"
+                            alt="ComTIA IT Fundamentals">
+                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <div class="backing"></div>
                     </button>
-                    <h5 class="text-center mt-1">ComTIA IT Fundamentals</h5>
+                    <h5 class="text-center mt-2">ComTIA IT Fundamentals</h5>
 
                     <!-- Modal -->
                     <div class="modal fade" id="cert-5" tabindex="-1" aria-labelledby="ComTIAITFundamentals"
@@ -371,7 +435,7 @@
             </div>
         </section>
         <section id="badge" class="py-5 mb-5">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i> badges</h1>
+            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;badges</h1>
             <div class="badge-gallery">
                 <a class="btn credly-badge glass py-3"
                     href="https://www.credly.com/earner/earned/badge/2ff8f153-4cfe-4d83-acd3-c37be25f88b4"
@@ -391,7 +455,7 @@
             </div>
         </section>
         <!-- <section id="cca" class="cca mb-4">
-            <h1><i class="fa-solid fa-hashtag"></i> curriculars_activities</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;curriculars_activities</h1>
             <h2 class="text-center py-5">A member of the Makers Innovators Tribe</h2>
             <div class="card-grid">
                 <div class="card mb-3">
@@ -433,7 +497,7 @@
                 style="background-color: #0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>
             <a class="btn" href="https://github.com/n1cholasong" target="_blank" style="background-color: #24292e;"><i
                     class="fa-brands fa-github"></i></a>
-            <a class="btn" href="mailto:nicholasong75@gmail.com" style="background-color: 	#fff;"><img
+            <a class="btn" href="mailto:nicholasong75@gmail.com" style="background-color: #fff;"><img
                     src="public/img/logo/gmail_icon.svg" alt="gmail"></a>
         </div>
     </footer>

@@ -121,14 +121,14 @@ footer .logo {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.glass-2 {
+/* .glass-2 {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-}
+} */
 
 section:not(#landing, #about) {
     padding-top: 10em;
@@ -162,7 +162,52 @@ h1>.fa-hashtag {
 .greetings {
     color: #333;
     padding-bottom: 68px;
+    position: relative;
+
 }
+
+.scroll {
+    border: 3px solid #333;
+    border-radius: 1em;
+    opacity: 0.8;
+    font-size: 1.5em;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.scroll i {
+    padding: 12px 6px;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
+
+.scroll a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(5px);
+    }
+}
+
 
 #about {
     /* padding: 22em 0; */
@@ -228,6 +273,10 @@ h1>.fa-hashtag {
     padding: 1.75em 1.5em;
 }
 
+/* PROJECTS */
+.card-cta {
+    /* height: 100%; */
+}
 
 /* CERTS */
 .cert-gallery {
@@ -244,7 +293,12 @@ h1>.fa-hashtag {
     height: calc(210mm/3);
 }
 
-.modal-heading {
+.btn-frame:hover {
+    transform: translateY(-1em);
+    transition: all 200ms ease;
+}
+
+.cert-gallery .modal-heading {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -252,26 +306,26 @@ h1>.fa-hashtag {
     padding: 1.125em;
 }
 
-.modal-title {
+.cert-gallery .modal-title {
     font-size: 1.8rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.modal-dialog {
+.cert-gallery .modal-dialog {
     max-width: 1150px;
 }
 
-.modal-content {
+.cert-gallery .modal-content {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.modal-body {
+.cert-gallery .modal-body {
     padding-top: 0;
 }
 
-.modal-body>.frame-holder {
+.cert-gallery .modal-body>.frame-holder {
     width: calc(290mm);
     height: calc(210mm);
 }
@@ -308,7 +362,7 @@ h1>.fa-hashtag {
 }
 
 
-.modal-body>.frame-holder .backing {
+.cert-gallery .modal-body>.frame-holder .backing {
     box-shadow: inset 0 0 3rem 2rem rgba(0, 0, 0, 0.5);
 }
 
@@ -371,15 +425,22 @@ h1>.fa-hashtag {
 }
 
 .glass-card-body {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
     padding: 1.125em;
+}
+
+.card-cta {
+    margin-top: auto;
+    text-align: center;
 }
 
 .highlight {
     /* border: 5px solid red; */
 }
 
-#projects img,
+#projects .card>img,
 #projects .card-img-top {
     /* padding: 2em; */
     width: 256px;
@@ -388,6 +449,13 @@ h1>.fa-hashtag {
     margin-bottom: 1em;
 }
 
+#projects .modal-dialog {
+    max-width: 1000px;
+}
+
+#projects .modal-dialog img {
+   max-height: 200px;
+}
 
 .card-img-top {
     background-repeat: no-repeat;
@@ -402,8 +470,15 @@ h1>.fa-hashtag {
 
 .card:hover>#fluentCalendar {
     background: url("../img/assets/spiral_calendar_3d_animated.png");
+    transform: translateY(-1em);
+    transition: all 200ms ease;
 }
 
+.card:hover>#fluentChess {
+    /* background: url("../img/assets/spiral_calendar_3d_animated.png"); */
+    transform: translateY(-1em);
+    transition: all 200ms ease;
+}
 
 #fluentCompass {
     background: url("../img/assets/compass_3d.png");
@@ -411,10 +486,12 @@ h1>.fa-hashtag {
 
 .card:hover>#fluentCompass {
     background: url("../img/assets/compass_3d_animated.png");
+    transform: translateY(-1em);
+    transition: all 200ms ease;
 }
 
 .glass-card-body:hover {
-    transform: translateY(-.375em);
+    /* transform: translateY(-.375em); */
     transition: all 200ms ease;
     border-radius: 1.125em;
     box-shadow: 0 4px 30px rgba(70, 130, 180, 0.1);
@@ -470,6 +547,7 @@ footer {
 .btn-success {
     letter-spacing: 1.5px;
 }
+
 /* .text {
     width: 60ch;
     word-wrap: break-word;
