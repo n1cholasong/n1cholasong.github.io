@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-row, .bottom-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box {
+    flex-grow: 1;
+    max-width: calc(100% / 3 - 20px); /* Adjust margin */
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    box-sizing: border-box; /* Include margin in width calculation */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .box {
+      max-width: calc(100% / 2 - 20px); /* Adjust margin */
+    }
+  }
+  
+
+  .container-g {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .box-g {
+    height: 100px;
+    background-color: blue;
+  }
+  
+  .box-g:nth-child(n+4) {
+    grid-column: span 2;
+  }
+
+
+
+  @keyframes rotate-needle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #needle {
+    transform-origin: 50% 50%; /* Ensure the needle rotates around its center */
+    animation: rotate-needle 2s linear infinite; /* Rotate infinitely with a 2-second duration */
+  }

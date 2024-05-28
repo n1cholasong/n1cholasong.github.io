@@ -1,0 +1,79 @@
+#certs .frame-container {
+    position: relative;
+    display: inline-block;
+    width: calc(290mm/2);
+    height: calc(210mm/2);
+}
+
+#certs .carousel-inner,
+#certs .frame,
+#certs .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* #certs .frame {
+    width: 100%;
+    aspect-ratio: 1.414 / 1;
+} */
+
+#certs .carousel-item img {
+    /* height: 365px; */
+    height: 280px;
+}
+
+#certs .background {
+    background-color: #eee;
+    /* width: 250mm;
+    height: 170mm; */
+    width: 90%;
+    /* aspect-ratio: 1.414 / 1; */
+    box-shadow: inset 0 0 2rem 1rem rgba(0, 0, 0, 0.6);
+    z-index: -2;
+}
+
+.carousel-item {
+    transition: transform 500ms ease;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0ms 1ms;
+}
+
+.carousel-inner {
+    /* background-image: url("../img/assets/white_frame.png"); */
+}
+
+.wall-of-fame {
+    display: flex;
+}
+
+.wall-of-fame .frame-container {
+    width: 400px;
+    height: auto;
+    margin: 0 0.25em;
+}
+
+.wall-of-fame .frame-container .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 70%; */
+}
+
+.wall-of-fame .background img {
+    width: 85%;
+    height: 85%;
+}
+
+
+.wall-of-fame-2 {
+    height: 100vh;
+}
+
+.highlight {
+    outline: 2px solid red;
+}

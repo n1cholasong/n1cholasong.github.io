@@ -1,0 +1,27 @@
+header {
+    background-color: linear-gradient(to bottom, hsla(36, 31%, 90%, 0) 0%, hsla(36, 31%, 90%, .013) 9.7%, hsla(36, 31%, 90%, .049) 18.1%, hsla(36, 31%, 90%, .104) 25.5%, hsla(36, 31%, 90%, .175) 31.9%, hsla(36, 31%, 90%, .259) 37.7%, hsla(36, 31%, 90%, .352) 43%, hsla(36, 31%, 90%, .45) 47.9%, hsla(36, 31%, 90%, .55) 52.8%, hsla(36, 31%, 90%, .648) 57.7%, hsla(36, 31%, 90%, .741) 63%, hsla(36, 31%, 90%, .825) 68.7%, hsla(36, 31%, 90%, .896) 75%, hsla(36, 31%, 90%, .951) 82.2%, hsla(36, 31%, 90%, .987) 90.5%, hsl(36, 31%, 90%) 100%);
+    font-size: 1.125em;
+    font-weight: 600;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {    
+    height: 40px;
+    width: 100%;
+}
+
+.navbar {
+    padding: .5em 1.125em;
+}
+
+.slash {
+    color: var(--test-green);
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1em;
+    transition: top 255ms ease;
+}
