@@ -6,4 +6,4 @@ Welcome to my digital portfolio, hosted right here on GitHub! This is where I sh
 Feel free to reach out to me through any of the following channels:
 - **Email**: [nicholasong75@gmail.com](mailto:nicholasong75@gmail.com)
 - **LinkedIn**: [https://www.linkedin.com/in/n1cholasong/](https://www.linkedin.com/in/n1cholasong/)
-- **Personal Website**: [https://n1cholasong.io/portfolio/](https://n1cholasong.io/portfolio/)
+- **Portfolio**: [https://n1cholasong.github.io/portfolio/](https://n1cholasong.github.io/portfolio/)
