@@ -1,7 +1,7 @@
-# Built by Nicholas
+# 🏗️ Built By Nicholas!
 This repository hosts the source code for all my staic web pages. Each page of the site has its own folder within this repository
 
-## Pages
+## 📔 Pages
 
 - **[Home](https://github.com/n1cholasong/n1cholasong.github.io)**: Overview and introduction.
 - **[Nicholas Ong](https://n1cholasong.github.io/portfolio/)**: My digital portfolio.
