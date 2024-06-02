@@ -496,6 +496,10 @@ h1>.fa-hashtag {
     box-shadow: 0 4px 30px rgba(70, 130, 180, 0.1);
 }
 
+.fluent-compass .modal-body img {
+    min-height: 350px; 
+}
+
 
 footer {
     position: relative;
