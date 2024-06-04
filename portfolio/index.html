@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/nav.css">
     <link rel="stylesheet" href="public/css/background.css">
+    <link rel="stylesheet" href="public/css/cert.css">
+    <link rel="stylesheet" href="public/css/footer.css">
     <!-- <link rel="stylesheet" href="public/css/carousel.css"> -->
 
     <link rel="icon" href="public/img/logo/niko_favicon.svg" type="image/x-icon">
@@ -53,9 +55,6 @@
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#cca"><span class="slash">/</span>cca</a>
                         </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#badge"><span class="slash">/</span>badges</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#connect"><span class="slash">/</span>connect</a>
                         </li>
@@ -144,7 +143,7 @@
                         <h5 class="card-title fw-bold">A-Star Pathing Visualizer</h5>
                         <p class="card-text">
                             A python script that utilizes the A-star algorithm to find the shortest path between two
-                            points on a map. It takes a contour map as input and visualizes the path with a 3D graph.
+                            points on a map. It takes a contour map as input and renders the path on a 3D plane.
                         </p>
                         <div class="card-cta">
                             <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
@@ -213,9 +212,11 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="aStarDemo">A-Star Pathing Visualizer</h1>
-                            <a href="https://github.com/n1cholasong/challenge-of-wits/tree/master/2023/Challenge3" target="_blank"
-                            class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a>
-                            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <a href="https://github.com/n1cholasong/challenge-of-wits/tree/master/2023/Challenge3"
+                                target="_blank" class="btn btn-outline-dark ms-auto">source <i
+                                    class="fa-brands fa-github"></i></a>
+                            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <h5>About The Project</h5>
@@ -239,9 +240,12 @@
                             </ul>
                             <h5>Python Screenshots</h5>
                             <hr>
-                            <div class="d-flex justify-content-evenly h-100">
-                                <img src="public/img/screenshots/20_contour_map.png" alt="2D contour map">
-                                <img src="public/img/screenshots/3D_contour_map.png" alt="3D contour map">
+                            <div class="d-flex justify-content-evenly h-100 contour-screenshots mb-3">
+                                <img src="public/img/screenshots/astar_2D_contour_map.png" alt="2D contour map">
+                                <img src="public/img/screenshots/astar_3D_contour_map.png" alt="3D contour map">
+                            </div>
+                            <div class="text-center">
+                                <img src="public/img/screenshots/astart_path_coordinates.png" alt="screenshots">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -254,7 +258,6 @@
         <section id="work" class="work">
             <h1><i class="fa-solid fa-hashtag"></i>&nbsp;professional_experience</h1>
             <div>
-
                 <button class="btn btn-toggle mb-4 p-3 d-flex justify-content-between glass" type="button"
                     data-bs-toggle="collapse" data-bs-target="#jobDescription-1" aria-expanded="true"
                     aria-controls="description-1">
@@ -263,6 +266,8 @@
                         <div>APR'23 – MAR'24</div>
                     </div>
                     <div><i class="fa-solid fa-minus px-2 ms-2"></i></div>
+                    <!-- <div><img src="public/img/assets/minus.png" alt="" width="16px"></div>
+                    <div><img src="public/img/assets/plus.png" alt="" width="16px"></div> -->
                 </button>
 
                 <div class="collapse show btn-toggle-body glass" id="jobDescription-1">
@@ -309,14 +314,14 @@
             </div>
         </section>
         <section id="certs" class="certs">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;certifications</h1>
-            <div class="cert-gallery">
+            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;certifications & badges</h1>
+            <div class="cert-gallery pb-5">
                 <div class="ACA-Cloud-Computing">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-1">
                         <img class="cert" src="public/img/certifications/ACA CloudComputing.png"
                             alt="ACA Cloud Computing">
-                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame" srcset="">
                         <div class="backing"></div>
                     </button>
                     <h5 class="text-center mt-2">ACA Cloud Computing</h5>
@@ -335,7 +340,7 @@
                                     <div class="frame-holder">
                                         <img class="cert" src="public/img/certifications/ACA CloudComputing.png"
                                             alt="ACA Cloud Computing">
-                                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame"
+                                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame"
                                             srcset="">
                                         <div class="backing"></div>
                                     </div>
@@ -348,7 +353,7 @@
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-2">
                         <img class="cert" src="public/img/certifications/STAR Awards.jpg" alt="NYP STAR Awards">
-                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame" srcset="">
                         <div class="backing"></div>
                     </button>
                     <h5 class="text-center mt-2">NYP STAR Awards [Merit]</h5>
@@ -366,7 +371,7 @@
                                     <div class="frame-holder">
                                         <img class="cert" src="public/img/certifications/STAR Awards.jpg"
                                             alt="NYP STAR Awards">
-                                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame"
+                                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame"
                                             srcset="">
                                         <div class="backing"></div>
                                     </div>
@@ -379,7 +384,7 @@
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-3">
                         <img class="cert" src="public/img/certifications/TikTok YouthCamp.png" alt="TikTok YouthCamp">
-                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame" srcset="">
                         <div class="backing"></div>
                     </button>
                     <h5 class="text-center mt-2">TikTok YouthCamp</h5>
@@ -397,7 +402,7 @@
                                     <div class="frame-holder">
                                         <img class="cert" src="public/img/certifications/TikTok YouthCamp.png"
                                             alt="TikTok YouthCamp">
-                                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame"
+                                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame"
                                             srcset="">
                                         <div class="backing"></div>
                                     </div>
@@ -406,12 +411,13 @@
                         </div>
                     </div>
                 </div>
+                <br>
                 <div class="Singtel-Cyber-Experience">
                     <!-- Button trigger modal -->
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-4">
                         <img class="cert" src="public/img/certifications/Singtel CyberExperience.jpeg"
                             alt="Singtel Cyber Experience">
-                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame" srcset="">
                         <div class="backing"></div>
                     </button>
                     <h5 class="text-center mt-2">Singtel CyberExperience</h5>
@@ -430,7 +436,7 @@
                                     <div class="frame-holder">
                                         <img class="cert" src="public/img/certifications/Singtel CyberExperience.jpeg"
                                             alt="Singtel Cyber Experience">
-                                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame"
+                                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame"
                                             srcset="">
                                         <div class="backing"></div>
                                     </div>
@@ -444,7 +450,7 @@
                     <button class="frame-holder btn-frame" data-bs-toggle="modal" data-bs-target="#cert-5">
                         <img class="cert" src="public/img/certifications/ComTIA IT Fundamentals.jpg"
                             alt="ComTIA IT Fundamentals">
-                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame" srcset="">
+                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame" srcset="">
                         <div class="backing"></div>
                     </button>
                     <h5 class="text-center mt-2">ComTIA IT Fundamentals</h5>
@@ -463,7 +469,7 @@
                                     <div class="frame-holder">
                                         <img class="cert" src="public/img/certifications/ComTIA IT Fundamentals.jpg"
                                             alt="ComTIA IT Fundamentals">
-                                        <img class="frame" src="public/img/assets/white_frame.png" alt="frame"
+                                        <img class="frame" src="public/img/assets/frame_white.png" alt="frame"
                                             srcset="">
                                         <div class="backing"></div>
                                     </div>
@@ -473,10 +479,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="badge" class="py-5 mb-5">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;badges</h1>
-            <div class="badge-gallery">
+            <div class="badge-gallery py-5">
                 <a class="btn credly-badge glass py-3"
                     href="https://www.credly.com/earner/earned/badge/2ff8f153-4cfe-4d83-acd3-c37be25f88b4"
                     target="_blank">
@@ -494,46 +497,159 @@
                 </a>
             </div>
         </section>
-        <!-- <section id="cca" class="cca mb-4">
+        <section id="cca" class="cca mb-4">
             <h1><i class="fa-solid fa-hashtag"></i>&nbsp;curriculars_activities</h1>
             <h2 class="text-center py-5">A member of the Makers Innovators Tribe</h2>
             <div class="card-grid">
                 <div class="card mb-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Admin Planner</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <img src="public/img/assets/teddy_bear.png" id="fluentTeaddy" class="card-img-top"
+                        alt="chess planet" width="256px">
+                    <div class="glass-card-body glass fluent-teaddy">
+                        <h5 class="card-title fw-bold">Maeki The Bear</h5>
+                        <p class="card-text">
+                            Our club mascot, Maeki-the-Bear, stands tall at 2 meters, brought to life through six months
+                            of collaborative effort. Embellished with a leather apron, wooden buckle, and 3D printed
+                            accessories, Maeki-the-Bear is a vibrant embodiment of our club's identity and creative
+                            spirit, showcasing elements from our past workshops.
+                        </p>
+                        <div class="card-cta">
+                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                                data-bs-target="#maekiBear">
+                                learn_more(&nbsp;)
+                            </button>
+                        </div>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Chess Planet</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <img src="public/img/assets/deciduous_tree.png" id="fluentTree" class="card-img-top"
+                        alt="chess planet" width="256px">
+                    <div class="glass-card-body glass fluent-tree">
+                        <h5 class="card-title fw-bold">Wire Bonsai Tree</h5>
+                        <p class="card-text">
+                            I conducted a captivating workshop where participants learned the art of crafting bonsai
+                            trees by skillfully twisting wires hundreds of times. In this transformative experience, we
+                            shaped chaos into beauty, turning simple wires into intricate masterpieces that mimic
+                            nature's serene elegance.
+                        </p>
+                        <div class="card-cta">
+                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                                data-bs-target="#wireBonsai">
+                                learn_more(&nbsp;)
+                            </button>
+                        </div>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <img src="public/img/assets/books.png" id="fluentBooks" class="card-img-top" alt="chess planet"
+                        width="256px">
+                    <div class="glass-card-body glass fluent-books">
+                        <h5 class="card-title fw-bold">Pass-It-On Bookshelf</h5>
+                        <p class="card-text">
+                            I collaborated with NYP library to build a bookshelf using upcycled wood. I also led a
+                            design thinking workshop with my club members at the library to brainstorm and develop
+                            ideas. The final bookshelf is now in the library, facilitating book sharing among staff and
+                            students.
+                        </p>
+                        <div class="card-cta">
+                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                                data-bs-target="#passItOn">
+                                learn_more(&nbsp;)
+                            </button>
+                        </div>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                     </div>
                 </div>
             </div>
-        </section> -->
+            <div class="modal-container">
+                <div class="modal fade" id="maekiBear" tabindex="-1" aria-labelledby="maekiBearDemo"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-between">
+                                <h1 class="modal-title fs-5" id="maekiBearDemo">Maeki-the-Bear</h1>
+                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
+                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>About The Project</h5>
+                                <hr>
+                                <p>
+                                    Our club mascot, Maeki-the-Bear, has come to life! Standing at 2 meters tall, this
+                                    captivating cardboard creation, embellished with a leather apron, wooden buckle, and
+                                    3D printed accessories, was the result of six months of collaborative effort from
+                                    members, seniors, alumni, and staff. Unveiled at the school's Student Life Carnival,
+                                    Maeki-the-Bear embodies our club's identity and creativity, showcasing elements from
+                                    our past workshops.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="wireBonsai" tabindex="-1" aria-labelledby="wireBonsaiDemo"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-between">
+                                <h1 class="modal-title fs-5" id="wireBonsaiDemo">Wire Bonsai Tree</h1>
+                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
+                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>About The </h5>
+                                <hr>
+                                <p>
+                                    Description
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="passItOn" tabindex="-1" aria-labelledby="passItOnDemo"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-between">
+                                <h1 class="modal-title fs-5" id="passItOnDemo">Pass-It-On Boookshelf</h1>
+                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
+                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>About The </h5>
+                                <hr>
+                                <p>
+                                    Description
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="whitespace" style="height: 500px;"></div>
     </main>
 
     <footer id="connect" class="d-flex justify-content-between">
         <img src="public/img/logo/niko_favicon.svg" alt="Logo" class="logo">
         <div class="copy">Nicholas Ong &copy; 2024</div>
         <div class="d-flex">
-            <div class="pe-4but ">Contact me at</div>
+            <div class="pe-4">Contact me at</div>
             <div class="socials">
                 <a class="btn" href="https://www.linkedin.com/in/n1cholasong/" target="_blank"
                     style="background-color: #0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>
