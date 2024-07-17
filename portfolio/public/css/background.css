@@ -21,3 +21,37 @@
     radial-gradient(at 0px 97%, rgb(227, 235, 255), white) 0% 0% repeat scroll rgba(0, 0, 0, 0);
   animation: pulsate 10s infinite alternate;
 }
+
+.composite-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/background/abstract-1.png");
+  /* background-position-y: 25%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  opacity: .8;
+  z-index: -1;
+  mix-blend-mode:multiply;
+
+  mask-image: linear-gradient(to top, black 0%, black 100%),
+    linear-gradient(to bottom, transparent 0%, black 100%),
+    linear-gradient(to top, transparent 0%, black 100%);
+  mask-position: center, bottom, top;
+  mask-size: 100% 100%, 100% 1000px, 100% 1000px;
+  mask-repeat: no-repeat, no-repeat, no-repeat;
+  mask-composite: subtract, add, add, add;
+
+  -webkit-mask-image: linear-gradient(to top, black 0%, black 100%),
+    linear-gradient(to bottom, transparent 0%, black 100%),
+    linear-gradient(to top, transparent 0%, black 100%);
+  -webkit-mask-position: center, bottom, top;
+  -webkit-mask-size: 100% 100%, 100% 1000px, 100% 1000px;
+  -webkit-mask-repeat: no-repeat, no-repeat, no-repeat;
+  -webkit-mask-composite: source-out, source-over, source-over, source-over;
+}

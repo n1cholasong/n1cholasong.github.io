@@ -21,11 +21,16 @@
     <link rel="stylesheet" href="public/css/background.css">
     <link rel="stylesheet" href="public/css/cert.css">
     <link rel="stylesheet" href="public/css/footer.css">
+    <link rel="stylesheet" href="public/css/experimental.css">
+    <link rel="stylesheet" href="public/css/button.css">
     <!-- <link rel="stylesheet" href="public/css/carousel.css"> -->
 
     <link rel="icon" href="public/img/logo/niko_favicon.svg" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script> -->
 </head>
 
 <body class="background">
@@ -68,17 +73,17 @@
             </nav>
         </div>
     </header>
-
-    <main class="container">
-        <section id="landing" class="landing">
-            <div class="greetings text-center">
-                <h1 class="fw-bold">Hello! I'm Nicholas&nbsp;Ong</h1>
-                <h3 class="fw-semibold">Student / Gamer / Aspiring Software Engineer / Cat Lover</h3>
-                <div class="scroll">
-                    <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
-                </div>
+    <section id="landing" class="landing composite-bg">
+        <div class="greetings text-center">
+            <h1 class="fw-bold">Hello! I'm Nicholas&nbsp;Ong</h1>
+            <h3 class="fw-semibold">Student / Gamer / Aspiring Software Engineer / Cat Lover</h3>
+            <div class="scroll">
+                <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
             </div>
-        </section>
+        </div>
+    </section>
+    <main class="container">
+
         <section id="about" class="about">
             <div class="about-grid">
                 <div class="intro">
@@ -89,11 +94,11 @@
                     </p>
                     <div class="pt-3">
                         <a href="public/docs/NicholasOng_Official_Transcript_of_Academic_Record.pdf" target="_blank"
-                            class="btn btn-success rounded-pill me-2 px-4">get_academic_transcript(&nbsp;)</a>
+                            class="btn btn-aqua me-2 px-4">get_academic_transcript(&nbsp;)</a>
                         <a href="public/docs/NicholasOng_Official_Transcript_of_Co-Curricular_Activities.pdf"
-                            target="_blank" class="btn btn-success rounded-pill px-4">get_cca_transcript(&nbsp;)</a>
+                            target="_blank"
+                            class="btn btn-aqua px-4">get_cca_transcript(&nbsp;)</a>
                     </div>
-
                 </div>
                 <div class="picture-frame">
                     <img src="public/img/nicholas_ong_nyp_graduate.JPG" alt="Nicholas Ong" class="me">
@@ -112,7 +117,7 @@
                             roster for Student Assistant Coaches.
                         </p>
                         <div class="card-cta">
-                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-aqua px-4" data-bs-toggle="modal"
                                 data-bs-target="#adminPlanner">
                                 learn_more(&nbsp;)
                             </button>
@@ -126,12 +131,12 @@
                     <div class="glass-card-body glass">
                         <h5 class="card-title fw-bold">Chess Planet</h5>
                         <p class="card-text">
-                            A static webpage designed to teach beginners the basics of chess and the various chess
-                            opening strategies. You can also test your skills against other players online!
+                            A static webpage designed for beginners to learn the basics of chess and various opening
+                            strategies. Users can also challenge other players online!
                         </p>
                         <div class="card-cta">
                             <a href="https://n1cholasong.github.io/ChessPlanet/" target="_blank"
-                                class="btn btn-success rounded-pill px-4 ">visit_page(&nbsp;)</a>
+                                class="btn btn-aqua px-4 ">visit_page(&nbsp;)</a>
                         </div>
 
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -146,7 +151,7 @@
                             points on a map. It takes a contour map as input and renders the path on a 3D plane.
                         </p>
                         <div class="card-cta">
-                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-aqua px-4" data-bs-toggle="modal"
                                 data-bs-target="#aStar">
                                 learn_more(&nbsp;)
                             </button>
@@ -156,100 +161,106 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="adminPlanner" tabindex="-1" aria-labelledby="adminPlannerDemo"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="adminPlannerDemo">Admin Planner</h1>
-                            <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
-                                class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a>
-                            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>About The Project</h5>
-                            <hr>
-                            <p>
-                                This web app was built to reduce the toil of scheduling duty rosters manually on Excel
-                                sheets. The project aims to automate the entire process, from collecting availabilities
-                                to allocating duties, with just a click of a button.
-                            </p>
-                            <h5>Tech Stack</h5>
-                            <hr>
-                            <p>This project is built using:</p>
-                            <ul>
-                                <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
-                                <li><a href="https://www.airtable.com/" target="_blank">Airtable</a></li>
-                                <li><a href="https://glitch.com/" target="_blank">Glitch</a></li>
-                                <li><a href="https://handlebarsjs.com/" target="_blank">Handlebars</a></li>
-                            </ul>
-                            <h5>How It Work?</h5>
-                            <hr>
-                            <ol class="mt-3">
-                                <li>First click go the submit availabilities page.</li>
-                                <img src="public/img/screenshots/admin-planner_demo_1.png" alt="">
-                                <li>Select the month you wish to be scheduled for duty.</li>
-                                <img src="public/img/screenshots/admin-planner_demo_2.png" alt="">
-                                <li>Then select the the shifts that you are available for duty</li>
-                                <img src="public/img/screenshots/admin-planner_demo_3.png" alt="">
-                                <li>Hit submit when ready. You will see a confirmation message.</li>
-                                <img src="public/img/screenshots/admin-planner_demo_4.png" alt="">
-                                <li>Head to the SAC Availability page to view your submited availabilities. You can also
-                                    view availabilities submited by others too!</li>
-                                <img src="public/img/screenshots/admin-planner_demo_5.png" alt="">
-                            </ol>
-                        </div>
-                        <div class="modal-footer">
-                            ...
+            <div class="modal-container">
+                <div class="modal fade" id="adminPlanner" tabindex="-1" aria-labelledby="adminPlannerDemo"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="adminPlannerDemo">Admin Planner</h1>
+                                <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
+                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a>
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>About The Project</h5>
+                                <hr>
+                                <p>
+                                    This web app was built to reduce the toil of scheduling duty rosters manually on
+                                    Excel
+                                    sheets. The project aims to automate the entire process, from collecting
+                                    availabilities
+                                    to allocating duties, with just a click of a button.
+                                </p>
+                                <h5>Tech Stack</h5>
+                                <hr>
+                                <p>This project is built using:</p>
+                                <ul>
+                                    <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+                                    <li><a href="https://www.airtable.com/" target="_blank">Airtable</a></li>
+                                    <li><a href="https://glitch.com/" target="_blank">Glitch</a></li>
+                                    <li><a href="https://handlebarsjs.com/" target="_blank">Handlebars</a></li>
+                                </ul>
+                                <h5>How It Work?</h5>
+                                <hr>
+                                <ol class="mt-3">
+                                    <li>First click go the submit availabilities page.</li>
+                                    <img src="public/img/screenshots/admin-planner_demo_1.png" alt="">
+                                    <li>Select the month you wish to be scheduled for duty.</li>
+                                    <img src="public/img/screenshots/admin-planner_demo_2.png" alt="">
+                                    <li>Then select the the shifts that you are available for duty</li>
+                                    <img src="public/img/screenshots/admin-planner_demo_3.png" alt="">
+                                    <li>Hit submit when ready. You will see a confirmation message.</li>
+                                    <img src="public/img/screenshots/admin-planner_demo_4.png" alt="">
+                                    <li>Head to the SAC Availability page to view your submited availabilities. You can
+                                        also
+                                        view availabilities submited by others too!</li>
+                                    <img src="public/img/screenshots/admin-planner_demo_5.png" alt="">
+                                </ol>
+                            </div>
+                            <div class="modal-footer">
+                                ...
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal fade" id="aStar" tabindex="-1" aria-labelledby="aStarDemo" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable fluent-compass">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="aStarDemo">A-Star Pathing Visualizer</h1>
-                            <a href="https://github.com/n1cholasong/challenge-of-wits/tree/master/2023/Challenge3"
-                                target="_blank" class="btn btn-outline-dark ms-auto">source <i
-                                    class="fa-brands fa-github"></i></a>
-                            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>About The Project</h5>
-                            <hr>
-                            <p>
-                                This project started from the <a
-                                    href="https://www.dtcareers.gov.sg/files/Challenge3_Answer.pdf"
-                                    target="_blank">Challenge Of Wits 2023 (Challenge 3)</a>. I took on this
-                                challenge to learn something new and discovered the Dijkstra and A-star algorithms,
-                                which helped me solve the question. To satisfy my curiosity, I added a graph plotting
-                                feature as an additional enhancement.
-                            </p>
-                            <h5>Tech Stack</h5>
-                            <hr>
-                            <p>This project is built using:</p>
-                            <ul>
-                                <li><a href="https://www.python.org/" target="_blank">Python</a></li>
-                                <li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></li>
-                                <li><a href="https://numpy.org/" target="_blank">Numpy</a></li>
-                                <li><a href="https://matplotlib.org/" target="_blank">Matplotlib</a></li>
-                            </ul>
-                            <h5>Python Screenshots</h5>
-                            <hr>
-                            <div class="d-flex justify-content-evenly h-100 contour-screenshots mb-3">
-                                <img src="public/img/screenshots/astar_2D_contour_map.png" alt="2D contour map">
-                                <img src="public/img/screenshots/astar_3D_contour_map.png" alt="3D contour map">
+                <div class="modal fade" id="aStar" tabindex="-1" aria-labelledby="aStarDemo" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable fluent-compass">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="aStarDemo">A-Star Pathing Visualizer</h1>
+                                <a href="https://github.com/n1cholasong/challenge-of-wits/tree/master/2023/Challenge3"
+                                    target="_blank" class="btn btn-outline-dark ms-auto">source <i
+                                        class="fa-brands fa-github"></i></a>
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="text-center">
-                                <img src="public/img/screenshots/astart_path_coordinates.png" alt="screenshots">
+                            <div class="modal-body">
+                                <h5>About The Project</h5>
+                                <hr>
+                                <p>
+                                    This project started from the <a
+                                        href="https://www.dtcareers.gov.sg/files/Challenge3_Answer.pdf"
+                                        target="_blank">Challenge Of Wits 2023 (Challenge 3)</a>. I took on this
+                                    challenge to learn something new and discovered the Dijkstra and A-star algorithms,
+                                    which helped me solve the question. To satisfy my curiosity, I added a graph
+                                    plotting
+                                    feature as an additional enhancement.
+                                </p>
+                                <h5>Tech Stack</h5>
+                                <hr>
+                                <p>This project is built using:</p>
+                                <ul>
+                                    <li><a href="https://www.python.org/" target="_blank">Python</a></li>
+                                    <li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></li>
+                                    <li><a href="https://numpy.org/" target="_blank">Numpy</a></li>
+                                    <li><a href="https://matplotlib.org/" target="_blank">Matplotlib</a></li>
+                                </ul>
+                                <h5>Python Screenshots</h5>
+                                <hr>
+                                <div class="d-flex justify-content-evenly h-100 contour-screenshots mb-3">
+                                    <img src="public/img/screenshots/astar_2D_contour_map.png" alt="2D contour map">
+                                    <img src="public/img/screenshots/astar_3D_contour_map.png" alt="3D contour map">
+                                </div>
+                                <div class="text-center">
+                                    <img src="public/img/screenshots/astart_path_coordinates.png" alt="screenshots">
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            ...
+                            <div class="modal-footer">
+                                ...
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -314,7 +325,7 @@
             </div>
         </section>
         <section id="certs" class="certs">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;certifications & badges</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;certifications & badges</h1>
             <div class="cert-gallery pb-5">
                 <div class="ACA-Cloud-Computing">
                     <!-- Button trigger modal -->
@@ -497,149 +508,13 @@
                 </a>
             </div>
         </section>
-        <section id="cca" class="cca mb-4">
-            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;curriculars_activities</h1>
-            <h2 class="text-center py-5">A member of the Makers Innovators Tribe</h2>
-            <div class="card-grid">
-                <div class="card mb-3">
-                    <img src="public/img/assets/teddy_bear.png" id="fluentTeaddy" class="card-img-top"
-                        alt="chess planet" width="256px">
-                    <div class="glass-card-body glass fluent-teaddy">
-                        <h5 class="card-title fw-bold">Maeki The Bear</h5>
-                        <p class="card-text">
-                            Our club mascot, Maeki-the-Bear, stands tall at 2 meters, brought to life through six months
-                            of collaborative effort. Embellished with a leather apron, wooden buckle, and 3D printed
-                            accessories, Maeki-the-Bear is a vibrant embodiment of our club's identity and creative
-                            spirit, showcasing elements from our past workshops.
-                        </p>
-                        <div class="card-cta">
-                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
-                                data-bs-target="#maekiBear">
-                                learn_more(&nbsp;)
-                            </button>
-                        </div>
-                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <img src="public/img/assets/deciduous_tree.png" id="fluentTree" class="card-img-top"
-                        alt="chess planet" width="256px">
-                    <div class="glass-card-body glass fluent-tree">
-                        <h5 class="card-title fw-bold">Wire Bonsai Tree</h5>
-                        <p class="card-text">
-                            I conducted a captivating workshop where participants learned the art of crafting bonsai
-                            trees by skillfully twisting wires hundreds of times. In this transformative experience, we
-                            shaped chaos into beauty, turning simple wires into intricate masterpieces that mimic
-                            nature's serene elegance.
-                        </p>
-                        <div class="card-cta">
-                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
-                                data-bs-target="#wireBonsai">
-                                learn_more(&nbsp;)
-                            </button>
-                        </div>
-                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <img src="public/img/assets/books.png" id="fluentBooks" class="card-img-top" alt="chess planet"
-                        width="256px">
-                    <div class="glass-card-body glass fluent-books">
-                        <h5 class="card-title fw-bold">Pass-It-On Bookshelf</h5>
-                        <p class="card-text">
-                            I collaborated with NYP library to build a bookshelf using upcycled wood. I also led a
-                            design thinking workshop with my club members at the library to brainstorm and develop
-                            ideas. The final bookshelf is now in the library, facilitating book sharing among staff and
-                            students.
-                        </p>
-                        <div class="card-cta">
-                            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
-                                data-bs-target="#passItOn">
-                                learn_more(&nbsp;)
-                            </button>
-                        </div>
-                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="modal-container">
-                <div class="modal fade" id="maekiBear" tabindex="-1" aria-labelledby="maekiBearDemo"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-between">
-                                <h1 class="modal-title fs-5" id="maekiBearDemo">Maeki-the-Bear</h1>
-                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
-                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
-                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h5>About The Project</h5>
-                                <hr>
-                                <p>
-                                    Our club mascot, Maeki-the-Bear, has come to life! Standing at 2 meters tall, this
-                                    captivating cardboard creation, embellished with a leather apron, wooden buckle, and
-                                    3D printed accessories, was the result of six months of collaborative effort from
-                                    members, seniors, alumni, and staff. Unveiled at the school's Student Life Carnival,
-                                    Maeki-the-Bear embodies our club's identity and creativity, showcasing elements from
-                                    our past workshops.
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                ...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="wireBonsai" tabindex="-1" aria-labelledby="wireBonsaiDemo"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-between">
-                                <h1 class="modal-title fs-5" id="wireBonsaiDemo">Wire Bonsai Tree</h1>
-                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
-                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
-                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h5>About The </h5>
-                                <hr>
-                                <p>
-                                    Description
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                ...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="passItOn" tabindex="-1" aria-labelledby="passItOnDemo"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-between">
-                                <h1 class="modal-title fs-5" id="passItOnDemo">Pass-It-On Boookshelf</h1>
-                                <!-- <a href="https://github.com/n1cholasong/sac-shifts" target="_blank"
-                                    class="btn btn-outline-dark ms-auto">source <i class="fa-brands fa-github"></i></a> -->
-                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h5>About The </h5>
-                                <hr>
-                                <p>
-                                    Description
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                ...
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section id="hobbies" class="hobbies">
+            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;hobbies</h1>
+            <h2 class="text-center py-5">Photography</h2>
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi assumenda nobis consequatur cum quod
+                dolorem quo illum soluta beatae sunt ullam provident quos, recusandae maiores non facere dignissimos
+                molestias debitis!
             </div>
         </section>
         <div class="whitespace" style="height: 500px;"></div>
@@ -649,7 +524,7 @@
         <img src="public/img/logo/niko_favicon.svg" alt="Logo" class="logo">
         <div class="copy">Nicholas Ong &copy; 2024</div>
         <div class="d-flex">
-            <div class="pe-4">Contact me at</div>
+            <div class="pe-4 lh-lg">Connect</div>
             <div class="socials">
                 <a class="btn" href="https://www.linkedin.com/in/n1cholasong/" target="_blank"
                     style="background-color: #0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -668,6 +543,29 @@
     <script src="https://kit.fontawesome.com/f4c7bec0a0.js" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="public/js/script.js"></script>
+
+    <!-- <script src="three.r134.min.js"></script> -->
+    <script src="public/js/vanta.fog.min.js"></script>
+    <!-- <script>
+        VANTA.FOG({
+            el: ".background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xa3b3ff,
+            midtoneColor: 0xff9bb9,
+            lowlightColor: 0xf0c076,
+            baseColor: 0xf2f2f2,
+            blurFactor: 0.50,
+            speed: 0.50,
+            zoom: 0.30
+        })
+    </script> -->
+
+
+
 </body>
 
 </html>

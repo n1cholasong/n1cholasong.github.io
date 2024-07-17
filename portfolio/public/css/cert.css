@@ -8,11 +8,15 @@
 .frame-holder {
     position: relative;
     display: inline-block;
+    background-color: transparent;
     width: calc(290mm/3);
     height: calc(210mm/3);
 }
 
-.btn-frame:hover {
+.btn-frame:hover,
+.btn-frame:active,
+.btn-frame:focus {
+    outline: none;
     transform: translateY(-1em);
     transition: all 200ms ease;
 }
