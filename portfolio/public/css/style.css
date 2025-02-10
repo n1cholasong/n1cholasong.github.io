@@ -113,7 +113,7 @@ footer .logo {
 
 .glass {
     /* rgba(124, 197, 209, 1) */
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, .40);
     border-radius: 1.125em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -453,7 +453,7 @@ h1>.fa-hashtag {
 }
 
 #projects .modal-dialog img {
-   max-height: 200px;
+    max-height: 200px;
 }
 
 .card-img-top {
@@ -497,7 +497,7 @@ h1>.fa-hashtag {
 }
 
 .fluent-compass .modal-body img {
-    min-height: 350px; 
+    min-height: 350px;
 }
 
 
@@ -505,24 +505,28 @@ footer {
     position: relative;
 }
 
+.git {
+    margin: 0;
+    font-family: Consolas, monaco, monospace;
+    font-size: 1.25em;
+    line-height: 2.5em;
+    color: ivory;
+}
+
 .copy {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-}
-
-.socials {
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .socials a {
     border-radius: 50%;
     background-color: #fff;
     padding: .125em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
 }
 
 .socials i {
@@ -545,7 +549,6 @@ footer {
 .socials img {
     width: 18px;
 }
-
 
 .btn-success {
     letter-spacing: 1.5px;
