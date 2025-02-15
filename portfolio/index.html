@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -64,7 +68,7 @@
 
                 <!-- CTA button -->
                 <div class="d-flex">
-                    <!-- <button class="btn btn-success rounded-pill">get_CV(&nbsp;)</button> -->
+                    <!-- <button class="btn btn-success rounded-pill">get_CV()</button> -->
                 </div>
             </nav>
         </div>
@@ -72,29 +76,43 @@
 
     <main class="container">
         <section id="landing" class="landing">
-            <div class="greetings text-center">
-                <h1 class="fw-bold">Hello! I'm Nicholas&nbsp;Ong</h1>
-                <h3 class="fw-semibold">Student / Gamer / Aspiring Software Engineer / Cat Lover</h3>
+            <div class="greetings">
+                <div class="intro">
+                    <div class="code text-secondary">
+                        def welcome_message():
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;message = f"""
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello World!
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's Nicholas 👋
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;print(message)
+                        <br>
+                        <br>if __name__ == '__main__':
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;welcome_message()
+                    </div>
+                    <h1 class="rainbow">Hello World!</h1>
+                    <h1>It's Nicholas<img src="public/img/assets/waving_hand_animated.png" alt="waving hand" class="waving"></h1>
+                    <h3 class="fw-semibold">Student / Gamer / Aspiring Software Engineer / Cat Lover</h3>
+                </div>
                 <div class="scroll">
                     <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
                 </div>
             </div>
+            
         </section>
         <section id="about" class="about">
             <div class="about-grid">
                 <div class="intro">
-                    <h1><i class="fa-solid fa-hashtag"></i>&nbsp;about_me</h1>
+                    <h1><i class="fa-solid fa-hashtag"></i>about_me</h1>
                     <p class="text">
                         Hi my name is Nicholas Ong, a fresh graduate from Nanyang Polytechnic. I'm an enthusiastic
                         learner with a strong desire for continuous improvement. Currenlty serving my NS in SCS.
                     </p>
-                    <div class="pt-3">
+                    <div class="transcript pt-3">
                         <a href="public/docs/NicholasOng_Official_Transcript_of_Academic_Record.pdf" target="_blank"
-                            class="btn btn-success rounded-pill me-2 px-4">get_academic_transcript(&nbsp;)</a>
+                            class="btn btn-success rounded-pill me-2 mb-2 px-4">get_academic_transcript()</a>
                         <a href="public/docs/NicholasOng_Official_Transcript_of_Co-Curricular_Activities.pdf"
-                            target="_blank" class="btn btn-success rounded-pill px-4">get_cca_transcript(&nbsp;)</a>
+                            target="_blank" class="btn btn-success rounded-pill mb-2 px-4">get_cca_transcript()</a>
                     </div>
-
                 </div>
                 <div class="picture-frame">
                     <img src="public/img/nicholas_ong_nyp_graduate.JPG" alt="Nicholas Ong" class="me">
@@ -102,7 +120,7 @@
             </div>
         </section>
         <section id="projects" class="projects">
-            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;projects</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>projects</h1>
             <div class="card-grid">
                 <div class="card mb-3">
                     <div id="fluentCalendar" class="card-img-top"></div>
@@ -115,7 +133,7 @@
                         <div class="card-cta">
                             <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
                                 data-bs-target="#adminPlanner">
-                                learn_more(&nbsp;)
+                                learn_more()
                             </button>
                         </div>
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -132,7 +150,7 @@
                         </p>
                         <div class="card-cta">
                             <a href="https://n1cholasong.github.io/ChessPlanet/" target="_blank"
-                                class="btn btn-success rounded-pill px-4 ">visit_page(&nbsp;)</a>
+                                class="btn btn-success rounded-pill px-4 ">visit_page()</a>
                         </div>
 
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -149,7 +167,7 @@
                         <div class="card-cta">
                             <button type="button" class="btn btn-success rounded-pill px-4" data-bs-toggle="modal"
                                 data-bs-target="#aStar">
-                                learn_more(&nbsp;)
+                                learn_more()
                             </button>
                         </div>
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -252,14 +270,14 @@
             </div>
         </section>
         <section id="work" class="work">
-            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;professional_experience</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>professional_experience</h1>
             <div>
 
                 <button class="btn btn-toggle mb-4 p-3 d-flex justify-content-between glass" type="button"
                     data-bs-toggle="collapse" data-bs-target="#jobDescription-1" aria-expanded="true"
                     aria-controls="description-1">
                     <div class="d-flex justify-content-between w-100">
-                        <div>Production Support <strong>@</strong> DBS Bank</div>
+                        <div>Production Support <i class="fa-solid fa-at"></i> DBS Bank</div>
                         <div>APR'23 – MAR'24</div>
                     </div>
                     <div><i class="fa-solid fa-minus px-2 ms-2"></i></div>
@@ -270,8 +288,8 @@
                         <div class="row justify-content-center align-items-center">
                             <div class="col-9">
                                 <div class="d-flex mb-3">
-                                    <div class="department ms-3"><i class="fa-solid fa-building"></i> T&O-MOT-RISK</div>
-                                    <div class="location ms-3"><i class="fa-solid fa-location-dot"></i> Singapore</div>
+                                    <div class="department ms-3 jetbrains-mono"><i class="fa-solid fa-building"></i> T&O-MOT-RISK</div>
+                                    <div class="location ms-3 jetbrains-mono"><i class="fa-solid fa-location-dot"></i> Singapore</div>
                                     <div class="web"></div>
                                 </div>
                                 <div class="card-text">
@@ -309,7 +327,7 @@
             </div>
         </section>
         <section id="certs" class="certs">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;certifications</h1>
+            <h1 class=""><i class="fa-solid fa-hashtag"></i>certifications</h1>
             <div class="cert-gallery">
                 <div class="ACA-Cloud-Computing">
                     <!-- Button trigger modal -->
@@ -475,7 +493,7 @@
             </div>
         </section>
         <section id="badge" class="py-5 mb-5">
-            <h1 class=""><i class="fa-solid fa-hashtag"></i>&nbsp;badges</h1>
+            <h1 class=""><i class="fa-solid fa-hashtag"></i>badges</h1>
             <div class="badge-gallery">
                 <a class="btn credly-badge glass py-3"
                     href="https://www.credly.com/earner/earned/badge/2ff8f153-4cfe-4d83-acd3-c37be25f88b4"
@@ -495,7 +513,7 @@
             </div>
         </section>
         <!-- <section id="cca" class="cca mb-4">
-            <h1><i class="fa-solid fa-hashtag"></i>&nbsp;curriculars_activities</h1>
+            <h1><i class="fa-solid fa-hashtag"></i>curriculars_activities</h1>
             <h2 class="text-center py-5">A member of the Makers Innovators Tribe</h2>
             <div class="card-grid">
                 <div class="card mb-3">
@@ -533,7 +551,7 @@
         <img src="public/img/logo/niko_favicon.svg" alt="Logo" class="logo">
         <div class="copy">&copy; 2024 – 2025 Nicholas Ong.</div>
         <div class="d-flex">
-            <p class="git">$ git in touch</p>
+            <p class="jetbrains-mono git">$ git in touch</p>
             <div class="socials d-flex">
                 <a class="btn" href="https://www.linkedin.com/in/n1cholasong/" target="_blank"
                     style="background-color: #0072b1;"><i class="fa-brands fa-linkedin-in"></i></a>

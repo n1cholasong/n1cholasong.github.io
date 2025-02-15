@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     $(".btn-toggle").click(function () {
-        var icon = $(this).find('.fa-solid');
+        var icon = $(this).find('div:nth-child(2) .fa-solid');
         icon.toggleClass('fa-minus fa-plus');
     });
 });
