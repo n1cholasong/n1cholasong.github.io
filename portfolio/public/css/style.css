@@ -209,8 +209,8 @@ h1>.fa-hashtag {
     top: 42%;
     left: 50%;
     transform: translate(-50%, -42%);
+    opacity: 0.3;
     width: 100%;
-    opacity: 0.25;
     font-size: 2.275rem;
     text-align: start;
     color: #eae8e4;
