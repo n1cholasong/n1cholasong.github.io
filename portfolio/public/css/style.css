@@ -28,8 +28,13 @@ h1 {
     font-style: normal;
     font-weight: 700;
     /* color: #eee; */
+    white-space: nowrap;
 }
 
+h3 {
+    font-size: 2em;
+    /* font-size: clamp(0.25em, 0em + 1.25vw, 2em); */
+}
 
 .fira {
     font-family: "Fira Code", serif;
@@ -110,9 +115,6 @@ body {
 }
 
 
-
-
-
 footer {
     background-color: #333;
     /* Footer background color */
@@ -181,7 +183,8 @@ h1>.fa-hashtag {
 }
 
 #landing h1 {
-    font-size: 6rem;
+    font-size: 8em;
+    /* font-size: clamp(1em, 0em + 5vw, 8em);    */
 }
 
 #landing {
@@ -204,6 +207,14 @@ h1>.fa-hashtag {
     position: relative;
 }
 
+.waving {
+    /* outline: 1px solid #333; */
+    height: 1.125em;
+    width: auto;
+    vertical-align: text-top;
+    padding-left: 1.125rem;
+}
+
 .code {
     position: absolute;
     top: 42%;
@@ -211,7 +222,8 @@ h1>.fa-hashtag {
     transform: translate(-50%, -42%);
     opacity: 0.3;
     width: 100%;
-    font-size: 2.275rem;
+    font-size: 3.5em;
+    /* font-size: clamp(0.438rem, 0rem + 2.188vw, 3.5rem); */
     text-align: start;
     color: #eae8e4;
     z-index: -1;
@@ -530,21 +542,28 @@ h1>.fa-hashtag {
     max-height: 200px;
 }
 
+/* 
 .card-img-top {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 256px;
-}
+    width: 256px;
+} */
 
 
 #fluentCalendar {
-    background: url("../img/assets/spiral_calendar_3d.png");
+    background: url("../img/assets/spiral_calendar_3d.png") no-repeat center;
 }
 
 .card:hover>#fluentCalendar {
-    background: url("../img/assets/spiral_calendar_3d_animated.png");
+    background: url("../img/assets/spiral_calendar_3d_animated.png") no-repeat center;
     transform: translateY(-1em);
     transition: all 200ms ease;
+}
+
+#fluentChess {
+    width: 256px;
+    height: auto;
 }
 
 .card:hover>#fluentChess {
@@ -554,11 +573,11 @@ h1>.fa-hashtag {
 }
 
 #fluentCompass {
-    background: url("../img/assets/compass_3d.png");
+    background: url("../img/assets/compass_3d.png") no-repeat center;
 }
 
 .card:hover>#fluentCompass {
-    background: url("../img/assets/compass_3d_animated.png");
+    background: url("../img/assets/compass_3d_animated.png") no-repeat center;
     transform: translateY(-1em);
     transition: all 200ms ease;
 }
@@ -583,8 +602,8 @@ footer {
     margin: 0;
     font-family: "JetBrains Mono", serif;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1.125em;
+    font-weight: 400;
+    font-size: 1em;
     line-height: 2.25em;
     color: ivory;
 }
@@ -634,13 +653,6 @@ footer {
     /* letter-spacing: 1.5px; */
 }
 
-.waving {
-    /* outline: 1px solid #333; */
-    height: 6rem;
-    line-height: 1.3em;
-    padding-left: 1.25rem;
-    margin-bottom: 2rem;
-}
 
 .waving-pic {}
 
@@ -649,3 +661,89 @@ footer {
     word-wrap: break-word;
     font-size: 1.125rem;
 } */
+
+
+@media screen and (max-width: 1400px) {
+    #landing h1 {
+        font-size: 6em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .code {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #landing h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    .code {
+        font-size: 2em;
+    }
+
+    .card:hover>#fluentCalendar,
+    .card:hover>#fluentCompass {
+        background-size: 200px;
+    }
+
+    #projects .card>img,
+    #projects .card-img-top {
+        width: 200px;
+        height: 200px;
+        background-size: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #landing h1 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .code {
+        font-size: 1.5em;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #fluentCalendar, #fluentChess, #fluentCompass {
+        display: none;
+    }
+
+    .card-cta {
+        text-align: end;
+    }
+
+    .git {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #landing h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .code {
+        font-size: 1.5em;
+    }
+
+}
