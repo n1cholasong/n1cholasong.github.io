@@ -701,6 +701,33 @@ footer {
         height: 200px;
         background-size: 200px;
     }
+
+    header {
+        position: static !important; 
+    }
+
+    .frame-holder {
+        position: relative;
+        display: inline-block;
+        width: calc(290mm/3);
+        height: calc(210mm/3);
+    }
+
+    .modal-title {
+        font-size: 1.5em;
+    }
+
+    .modal-content {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cert-gallery .modal-body>.frame-holder {
+        width: calc(290mm/4);
+        height: calc(210mm/4);
+        aspect-ratio: 1.414 / 1;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -730,6 +757,46 @@ footer {
 
     .git {
         display: none;
+    }  
+
+    .cert-gallery {
+        gap: 1em;
+    }
+
+    .frame-holder {
+        position: relative;
+        display: inline-block;
+        width: calc(290mm/6);
+        height: calc(210mm/6);
+    }
+
+    .modal-title {
+        font-size: 1em;
+    }
+
+    .frame-holder + h5 {
+        font-size: .75em;
+    }
+    
+    .credly-badge {
+        width: 200px;
+        font-size: .75em;
+    }
+
+    .badge-gallery {
+        gap: 1.5em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    .work li {
+        font-size: 0.75em;
+    }
+
+    .copy {
+        display: none;
     }
 }
 
@@ -745,5 +812,4 @@ footer {
     .code {
         font-size: 1.5em;
     }
-
 }

@@ -4,7 +4,12 @@ $(document).ready(function () {
 
     if (scrollTop > headerHeight) {
         $(".navbar").addClass("glass");
-        $("header").addClass("sticky");
+
+        if ($(window).width() > 768) {
+            $("header").addClass("sticky");
+        } else {
+            $("header").removeClass("sticky");
+        }
     }
 
     $(window).scroll(function () {

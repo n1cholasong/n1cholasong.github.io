@@ -12,7 +12,7 @@ header .logo {
 }
 
 .navbar {
-    padding: .5em 1.125em;
+    padding: .5em 0;
 }
 
 .slash {
@@ -31,4 +31,10 @@ header .logo {
     font-optical-sizing: auto;
     /* font-weight: 400; */
     font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: .5em 1.125em;
+    }
 }
