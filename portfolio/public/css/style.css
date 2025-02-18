@@ -493,7 +493,7 @@ h1>.fa-hashtag {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25em;
 }
 
@@ -528,8 +528,8 @@ h1>.fa-hashtag {
 #projects .card>img,
 #projects .card-img-top {
     /* padding: 2em; */
-    width: 256px;
-    height: 256px;
+    width: 192px;
+    height: 192px;
     margin: 0 auto;
     margin-bottom: 1em;
 }
@@ -542,31 +542,26 @@ h1>.fa-hashtag {
     max-height: 200px;
 }
 
-/* 
-.card-img-top {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 256px;
-    width: 256px;
-} */
-
-
 #fluentCalendar {
     background: url("../img/assets/spiral_calendar_3d.png") no-repeat center;
+    background-size: 192px;
 }
 
 .card:hover>#fluentCalendar {
     background: url("../img/assets/spiral_calendar_3d_animated.png") no-repeat center;
     transform: translateY(-1em);
     transition: all 200ms ease;
+    background-size: 192px;
 }
 
-#fluentChess {
-    width: 256px;
+#fluentChess,
+#fluentHelmet {
+    width: 192px;
     height: auto;
 }
 
-.card:hover>#fluentChess {
+.card:hover>#fluentChess,
+.card:hover>#fluentHelmet {
     /* background: url("../img/assets/spiral_calendar_3d_animated.png"); */
     transform: translateY(-1em);
     transition: all 200ms ease;
@@ -574,12 +569,14 @@ h1>.fa-hashtag {
 
 #fluentCompass {
     background: url("../img/assets/compass_3d.png") no-repeat center;
+    background-size: 192px;
 }
 
 .card:hover>#fluentCompass {
     background: url("../img/assets/compass_3d_animated.png") no-repeat center;
     transform: translateY(-1em);
     transition: all 200ms ease;
+    background-size: 192px;
 }
 
 .glass-card-body:hover {
@@ -690,6 +687,10 @@ footer {
         font-size: 2em;
     }
 
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .card:hover>#fluentCalendar,
     .card:hover>#fluentCompass {
         background-size: 200px;
@@ -747,7 +748,7 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    #fluentCalendar, #fluentChess, #fluentCompass {
+    #fluentCalendar, #fluentChess, #fluentCompass, #fluentHelmet {
         display: none;
     }
 

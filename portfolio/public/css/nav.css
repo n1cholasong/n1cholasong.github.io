@@ -35,6 +35,6 @@ header .logo {
 
 @media screen and (min-width: 768px) {
     .navbar {
-        padding: .5em 1.125em;
+        padding: .5em 2em;
     }
 }
