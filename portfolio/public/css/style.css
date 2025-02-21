@@ -133,7 +133,7 @@ footer .logo {
 }
 
 .btn:focus {
-    border: none;
+    /* border: none; */
 }
 
 .container {
@@ -789,7 +789,7 @@ footer {
     }
 
     h5 {
-        font-size: 1em;
+        /* font-size: 1em; */
     }
 
     .work li {
