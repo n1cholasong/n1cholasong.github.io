@@ -501,13 +501,13 @@ h1>.fa-hashtag {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
 .card-grid .card .card-title .btn {
-    padding: 0.2em 0.7em;
-    font-size: 0.75em;
+    padding: 0.2rem .8rem;
+    font-size: 0.75rem;
     display: flex;
     align-items: center;
     /* background-color: var(--test-blue); */
@@ -563,6 +563,15 @@ h1>.fa-hashtag {
 
 #projects .modal-dialog img {
     max-height: 200px;
+}
+
+.modal-dialog .badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem .8rem;
+    border-radius: 50rem;
+    color: #fff;
+    background-color: #333;
 }
 
 #fluentCalendar {
@@ -778,9 +787,14 @@ footer {
         display: none;
     }
 
-    .card-cta {
+    .card-cta{
         text-align: end;
     }
+    .cart-text {
+        height: 100%;
+        display: flex;
+        flex: 1 1 auto;
+    } 
 
     .git {
         display: none;
@@ -807,7 +821,7 @@ footer {
 
     .credly-badge {
         width: 200px;
-        font-size: .75em;
+        font-size: .75rem;
     }
 
     .badge-gallery {
