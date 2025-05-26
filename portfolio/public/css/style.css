@@ -493,10 +493,33 @@ h1>.fa-hashtag {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25em;
 }
 
+.card-grid .card .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.card-grid .card .card-title .btn {
+    padding: 0.2em 0.7em;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    /* background-color: var(--test-blue); */
+}
+
+.card-grid .card .badge {
+    color: #333;
+    background-color: var(--test-yellow);
+    font-weight: 500;
+    border-radius: 2em;
+
+}
 
 .card {
     background-color: transparent;
@@ -513,7 +536,7 @@ h1>.fa-hashtag {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: 1.125em;
+    padding: 1.5em;
 }
 
 .card-cta {
@@ -704,7 +727,7 @@ footer {
     }
 
     header {
-        position: static !important; 
+        position: static !important;
     }
 
     .frame-holder {
@@ -748,7 +771,10 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    #fluentCalendar, #fluentChess, #fluentCompass, #fluentHelmet {
+    #fluentCalendar,
+    #fluentChess,
+    #fluentCompass,
+    #fluentHelmet {
         display: none;
     }
 
@@ -758,7 +784,7 @@ footer {
 
     .git {
         display: none;
-    }  
+    }
 
     .cert-gallery {
         gap: 1em;
@@ -775,10 +801,10 @@ footer {
         font-size: 1em;
     }
 
-    .frame-holder + h5 {
+    .frame-holder+h5 {
         font-size: .75em;
     }
-    
+
     .credly-badge {
         width: 200px;
         font-size: .75em;
